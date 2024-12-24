@@ -16,15 +16,15 @@ export default function Index() {
         <div className="w-[70px] min-w-12  max-[895px]:w-12"></div>
         <div className=" min-w-44 flex  w-[24.3%]   justify-end px-3">
           {" "}
-          <NavButton className="mr-2">
+          <TopNavButton className="mr-2">
             <Icons.LeftArrow />
-          </NavButton>
-          <NavButton className="mr-2">
+          </TopNavButton>
+          <TopNavButton className="mr-2">
             <Icons.RightArrow />
-          </NavButton>
-          <NavButton>
+          </TopNavButton>
+          <TopNavButton>
             <Icons.Clock />
-          </NavButton>
+          </TopNavButton>
         </div>
         <div className="flex w-[75.7%]">
           {" "}
@@ -32,9 +32,9 @@ export default function Index() {
             <Icons.HoverGlass className="h-[15px]" />
           </button>
           <div className="flex justify-end flex-grow-[0.3] w-[35%]">
-            <NavButton>
+            <TopNavButton>
               <Icons.QuestionMark />
-            </NavButton>
+            </TopNavButton>
           </div>
         </div>
       </div>
@@ -47,7 +47,7 @@ export default function Index() {
   );
 }
 
-export const NavButton = ({ className, children }: StyleAttributes & Props) => {
+export const TopNavButton = ({ className, children }: StyleAttributes & Props) => {
   return (
     <button
       className={`h-[26px] w-[26px] p-[3px] hover:bg-purple-650 rounded-md  text-white ${className}`}
