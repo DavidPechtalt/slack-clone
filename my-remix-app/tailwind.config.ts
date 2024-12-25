@@ -1,18 +1,26 @@
+import defaultTheme from "tailwindcss/defaultTheme";
 import type { Config } from "tailwindcss";
 
 export default {
   content: ["./app/**/{**,.client,.server}/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
-    colors:{
-      purple:{
-        600:'#866487',
-        650:'#754778',
-        700: '#714575',
-        800: '#5a2b5c',
-        900: '#3c073d'
-      }
-    }
+      fontFamily: {
+        sans: ["Lato", "Open-Sans", ...defaultTheme.fontFamily.sans],
+      },
+
+      colors: {
+        lightBlack: "#1a1d21",
+        lightGray: "#acacad",
+        purple: {
+          100:"#bea9c4",
+          600: "#866487",
+          650: "#754778",
+          700: "#714575",
+          800: "#5a2b5c",
+          900: "#410d42",
+        },
+      },
     },
   },
   plugins: [],

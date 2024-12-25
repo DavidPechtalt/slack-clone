@@ -39,9 +39,64 @@ export default function Index() {
         </div>
       </div>
       <div className="flex h-[calc(100vh-40px)] w-[100vw] overflow-hidden bg-purple-900">
-        <div className="w-[70px] min-w-12 max-[895px]:w-12"></div>
+        <div className="flex flex-col items-center justify-start pb-6 pt-2 max-[895px]:w-12 min-[895px]:min-w-[70px]">
+          <div className="bg-lightGray text-lightBlack mb-[18px] flex h-9 w-9 items-center justify-center rounded-lg text-xl font-bold uppercase">
+            rv
+          </div>
+          <div className="flex h-[68px] w-[52px] flex-col items-center justify-center">
+            <div className="bg-purple-650 flex h-9 w-9 items-center justify-center rounded-lg text-xl font-bold uppercase text-white">
+              <Icons.House className="h-5 w-5" />
+            </div>
+            <span className="mt-[1.5px] text-[11px] font-bold tracking-tighter text-white">
+              Home
+            </span>
+          </div>
+          <div className="flex h-[68px] w-[52px] flex-col items-center justify-center">
+            <div className="flex h-9 w-9 items-center justify-center rounded-lg text-xl font-bold uppercase text-white">
+              <Icons.Chat className="h-5 w-5" />
+            </div>
+            <span className="mt-[1.5px] text-[11px] font-bold tracking-tighter text-white">
+              DMs
+            </span>
+          </div>
+          <div className="flex h-[68px] w-[52px] flex-col items-center justify-center">
+            <div className="flex h-9 w-9 items-center justify-center rounded-lg text-xl font-bold uppercase text-white">
+              <Icons.Bell className="h-5 w-5" />
+            </div>
+            <span className="mt-[1.5px] text-[11px] font-bold tracking-tighter text-white">
+              Activity
+            </span>
+          </div>
+          <div className="flex h-[68px] w-[52px] flex-col items-center justify-center">
+            <div className="flex h-9 w-9 items-center justify-center rounded-lg text-xl font-bold uppercase text-white">
+              <Icons.Play className="h-5 w-5" />
+            </div>
+            <span className="mt-[1.5px] text-[11px] font-bold tracking-tighter text-white">
+              Automa...
+            </span>
+          </div>
+          <div className="flex h-[68px] w-[52px] flex-col items-center justify-center">
+            <div className="flex h-9 w-9 items-center justify-center rounded-lg text-xl font-bold uppercase text-white">
+              <Icons.Dots className="h-5 w-5" />
+            </div>
+            <span className="mt-[1.5px] text-[11px] font-bold tracking-tighter text-white">
+              More
+            </span>
+          </div>
+          <div className="bg-purple-650 mt-auto flex h-9 w-9 items-center justify-center rounded-full text-xl font-bold uppercase text-purple-100">
+            <Icons.Plus className="h-5 w-5" />
+          </div>
+          <div className="mt-[19.5px] flex w-[100%] justify-center ">
+            <img
+              src="/profile.png"
+              alt="profile "
+              className="h-9 w-9 rounded-md"
+            ></img>
+          </div>
+        </div>
+
         <div className="h-100% w-[24.3%] min-w-44 rounded-l-md bg-purple-800"></div>
-        <div className="mb-1 mr-1 w-[75.7%] rounded-r-md bg-white"></div>
+        <div className="mb-1 mr-1 w-[75.7%] rounded-r-md bg-white py-2"></div>
       </div>
     </div>
   );
