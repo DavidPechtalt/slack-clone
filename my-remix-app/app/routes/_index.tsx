@@ -10,36 +10,32 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
-  const [value, setValue] = useState<number>(176); 
-  const [windowWidth, setWindowWidth] = useState<number>(0)
+  const [value, setValue] = useState<number>(176);
+  const [windowWidth, setWindowWidth] = useState<number>(0);
   useEffect(() => {
-    setWindowWidth(window.innerWidth)
+    setWindowWidth(window.innerWidth);
     const handleResize = () => {
-      setWindowWidth(window.innerWidth );
+      setWindowWidth(window.innerWidth);
     };
 
-
     window.addEventListener("resize", handleResize);
-
 
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
 
-  
-const min = 180
-  const handleMouseDown = (
-    event: React.MouseEvent,
-   
-
-  ) => {
+  const min = 180;
+  const handleMouseDown = (event: React.MouseEvent) => {
     const startX = event.clientX;
     const startValue = value;
-    
+
     const handleDrag = (moveEvent: MouseEvent) => {
       const delta = moveEvent.clientX - startX;
-      const newValue = Math.min(windowWidth* 0.7, Math.max(min, startValue + delta));
+      const newValue = Math.min(
+        windowWidth * 0.7,
+        Math.max(min, startValue + delta),
+      );
       setValue(newValue);
     };
 
@@ -165,7 +161,7 @@ const min = 180
             onMouseDown={(e) => handleMouseDown(e)}
             role="slider"
             aria-valuemin={min}
-            aria-valuemax={windowWidth  * 0.7}
+            aria-valuemax={windowWidth * 0.7}
             aria-valuenow={value}
             tabIndex={0}
           ></div>
