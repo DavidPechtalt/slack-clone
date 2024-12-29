@@ -2,6 +2,8 @@ import type { MetaFunction } from "@remix-run/node";
 import * as Icons from "../../components/icons";
 import { StyleAttributes, Props } from "../../types/types";
 import { useEffect, useState } from "react";
+import resolveConfig from "tailwindcss/resolveConfig";
+import tailwindConfig from "../../tailwind.config";
 export const meta: MetaFunction = () => {
   return [
     { title: "Slack Clone" },
@@ -10,8 +12,10 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
+  const fullConfig = resolveConfig(tailwindConfig);
   const [value, setValue] = useState<number>(176);
   const [windowWidth, setWindowWidth] = useState<number>(0);
+  const [isMoving, setIsMoving] = useState<boolean>(false);
   useEffect(() => {
     setWindowWidth(window.innerWidth);
     const handleResize = () => {
@@ -31,15 +35,17 @@ export default function Index() {
     const startValue = value;
 
     const handleDrag = (moveEvent: MouseEvent) => {
+      setIsMoving(true);
       const delta = moveEvent.clientX - startX;
       const newValue = Math.min(
         windowWidth * 0.7,
         Math.max(min, startValue + delta),
       );
-      setValue(newValue);
+      setTimeout(() => setValue(newValue), 300);
     };
 
     const stopDrag = () => {
+      setIsMoving(false);
       document.removeEventListener("mousemove", handleDrag);
       document.removeEventListener("mouseup", stopDrag);
     };
@@ -155,7 +161,10 @@ export default function Index() {
           </div>
         </div>
 
-        <div className="relative mb-1 mr-1 flex-grow rounded-r-md bg-white">
+        <div
+          className="relative mb-1 mr-1 flex-grow rounded-r-md bg-white"
+          style={{ cursor: `${isMoving ? "col-resize" : ""}` }}
+        >
           <div
             className="absolute z-50 h-[100%] w-[3px] cursor-col-resize transition duration-500 hover:bg-seaBlue"
             onMouseDown={(e) => handleMouseDown(e)}
@@ -164,6 +173,9 @@ export default function Index() {
             aria-valuemax={windowWidth * 0.7}
             aria-valuenow={value}
             tabIndex={0}
+            style={{
+              background: `${isMoving ? `${fullConfig.theme.colors.seaBlue}` : ""}`,
+            }}
           ></div>
         </div>
       </div>
