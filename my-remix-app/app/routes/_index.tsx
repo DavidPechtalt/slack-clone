@@ -1,6 +1,7 @@
 import type { MetaFunction } from "@remix-run/node";
 import * as Icons from "../../components/icons";
 import { StyleAttributes, Props } from "../../types/types";
+import { useEffect, useState } from "react";
 export const meta: MetaFunction = () => {
   return [
     { title: "Slack Clone" },
@@ -9,6 +10,48 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
+  const [value, setValue] = useState<number>(176); 
+  const [windowWidth, setWindowWidth] = useState<number>(0)
+  useEffect(() => {
+    setWindowWidth(window.innerWidth)
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth );
+    };
+
+
+    window.addEventListener("resize", handleResize);
+
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  
+const min = 180
+  const handleMouseDown = (
+    event: React.MouseEvent,
+   
+
+  ) => {
+    const startX = event.clientX;
+    const startValue = value;
+    
+    const handleDrag = (moveEvent: MouseEvent) => {
+      const delta = moveEvent.clientX - startX;
+      const newValue = Math.min(windowWidth* 0.7, Math.max(min, startValue + delta));
+      setValue(newValue);
+    };
+
+    const stopDrag = () => {
+      document.removeEventListener("mousemove", handleDrag);
+      document.removeEventListener("mouseup", stopDrag);
+    };
+
+    document.addEventListener("mousemove", handleDrag);
+    document.addEventListener("mouseup", stopDrag);
+  };
+
   return (
     <div className="flex flex-col overflow-hidden">
       {" "}
@@ -38,7 +81,7 @@ export default function Index() {
           </div>
         </div>
       </div>
-      <div className="flex h-[calc(100vh-40px)] w-[100vw] overflow-hidden bg-purple-900">
+      <div className="relative flex h-[calc(100vh-40px)] w-[100vw] overflow-hidden bg-purple-900">
         <div className="flex flex-col items-center justify-start pb-6 pt-2 max-[895px]:w-12 min-[895px]:min-w-[70px]">
           <div className="mb-[18px] flex h-9 w-9 items-center justify-center rounded-lg bg-lightGray text-xl font-bold uppercase text-lightBlack">
             rv
@@ -95,13 +138,16 @@ export default function Index() {
           </div>
         </div>
 
-        <div className="h-100% w-[24.3%] min-w-44 overflow-hidden rounded-l-md bg-purple-800">
-          <div className="flex h-[49px] w-[100%] items-center pl-3 pr-4">
+        <div
+          className={`h-100% top-0 flex min-w-44 overflow-hidden rounded-l-md bg-purple-800`}
+          style={{ width: `${value}px` }}
+        >
+          <div className="flex h-[49px] w-[calc(100%-3px)] items-center pl-3 pr-4">
             <button className="min-w[135px] flex h-[30px] w-[70%] max-w-[252px] px-2 py-[3px] text-white">
-              <span className="w-[calc(100% -18px)]  truncate text-lg/6 font-bold tracking-tight [font-strech:100%]">
+              <span className="w-[calc(100% -18px)] truncate text-lg/6 font-bold tracking-tight [font-strech:100%]">
                 RavTech Venn Introduction
               </span>
-            
+
               <Icons.Fold className="mt-[3px] h-[18px] w-[18px]" />
             </button>
             <div className="ml-auto flex h-9 w-9 items-center justify-center rounded-lg text-xl text-purple-300">
@@ -112,7 +158,18 @@ export default function Index() {
             </div>
           </div>
         </div>
-        <div className="mb-1 mr-1 w-[75.7%] rounded-r-md bg-white py-2"></div>
+
+        <div className="relative mb-1 mr-1 flex-grow rounded-r-md bg-white">
+          <div
+            className="absolute z-50 h-[100%] w-[3px] cursor-col-resize transition duration-500 hover:bg-seaBlue"
+            onMouseDown={(e) => handleMouseDown(e)}
+            role="slider"
+            aria-valuemin={min}
+            aria-valuemax={windowWidth  * 0.7}
+            aria-valuenow={value}
+            tabIndex={0}
+          ></div>
+        </div>
       </div>
     </div>
   );

@@ -10,6 +10,7 @@ export default {
       },
 
       colors: {
+        seaBlue: "#1d9bd1",
         lightBlack: "#1a1d21",
         lightGray: "#acacad",
         purple: {
