@@ -85,10 +85,18 @@ export function Play({ className }: StyleAttributes) {
     />
   );
 }
-export function Dots({ className }: StyleAttributes) {
+export function DotsHor({ className }: StyleAttributes) {
   return (
     <SvgIcon
       d="M14.5 10a1.75 1.75 0 1 1 3.5 0 1.75 1.75 0 0 1-3.5 0m-6.25 0a1.75 1.75 0 1 1 3.5 0 1.75 1.75 0 0 1-3.5 0M2 10a1.75 1.75 0 1 1 3.5 0A1.75 1.75 0 0 1 2 10"
+      className={className}
+    />
+  );
+}
+export function DotsVer({ className }: StyleAttributes) {
+  return (
+    <SvgIcon
+      d="M10 5.5A1.75 1.75 0 1 1 10 2a1.75 1.75 0 0 1 0 3.5m0 6.25a1.75 1.75 0 1 1 0-3.5 1.75 1.75 0 0 1 0 3.5m-1.75 4.5a1.75 1.75 0 1 0 3.5 0 1.75 1.75 0 0 0-3.5 0"
       className={className}
     />
   );

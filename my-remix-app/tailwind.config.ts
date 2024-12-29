@@ -8,14 +8,17 @@ export default {
       fontFamily: {
         sans: ["Lato", "Open-Sans", ...defaultTheme.fontFamily.sans],
       },
-
+      screens: {
+        small: "40px",
+        medium: "895px",
+      },
       colors: {
         seaBlue: "#1d9bd1",
         lightBlack: "#1a1d21",
         lightGray: "#acacad",
         purple: {
-          100:"#bea9c4",
-          300:"#d8c5de",
+          100: "#bea9c4",
+          300: "#d8c5de",
           600: "#866487",
           650: "#754778",
           700: "#714575",

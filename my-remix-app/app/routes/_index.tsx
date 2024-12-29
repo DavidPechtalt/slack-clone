@@ -58,7 +58,7 @@ export default function Index() {
     <div className="flex flex-col overflow-hidden">
       {" "}
       <div className="flex h-10 items-center bg-purple-900 pr-2">
-        <div className="w-[70px] min-w-12 max-[895px]:w-12"></div>
+        <div className="w-12 medium:w-[70px]"></div>
         <div className="flex w-[24.3%] min-w-44 justify-end px-3">
           {" "}
           <TopNavButton className="mr-2">
@@ -83,60 +83,43 @@ export default function Index() {
           </div>
         </div>
       </div>
-      <div className="relative flex h-[calc(100vh-40px)] w-[100vw] overflow-hidden bg-purple-900">
-        <div className="flex flex-col items-center justify-start pb-6 pt-2 max-[895px]:w-12 min-[895px]:min-w-[70px]">
-          <div className="mb-[18px] flex h-9 w-9 items-center justify-center rounded-lg bg-lightGray text-xl font-bold uppercase text-lightBlack">
+      <div
+        className="relative flex h-[calc(100vh-40px)] w-[100vw] overflow-hidden bg-purple-900"
+        style={{ cursor: `${isMoving ? "col-resize" : ""}` }}
+      >
+        <div className="flex w-12 flex-col items-center justify-start pb-6 pt-2.5 medium:w-[70px] medium:pt-2">
+          <div className="mb-[9px] flex h-6 w-6 items-center justify-center rounded-md bg-lightGray text-[13px] font-bold uppercase text-lightBlack medium:mb-[18px] medium:h-9 medium:w-9 medium:text-xl">
             rv
           </div>
-          <div className="flex h-[68px] w-[52px] flex-col items-center justify-center">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-purple-650 text-xl font-bold uppercase text-white">
-              <Icons.House className="h-5 w-5" />
-            </div>
-            <span className="mt-[1.5px] text-[11px] font-bold tracking-tighter text-white">
-              Home
-            </span>
-          </div>
-          <div className="flex h-[68px] w-[52px] flex-col items-center justify-center">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg text-xl font-bold uppercase text-white">
-              <Icons.Chat className="h-5 w-5" />
-            </div>
-            <span className="mt-[1.5px] text-[11px] font-bold tracking-tighter text-white">
-              DMs
-            </span>
-          </div>
-          <div className="flex h-[68px] w-[52px] flex-col items-center justify-center">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg text-xl font-bold uppercase text-white">
-              <Icons.Bell className="h-5 w-5" />
-            </div>
-            <span className="mt-[1.5px] text-[11px] font-bold tracking-tighter text-white">
-              Activity
-            </span>
-          </div>
-          <div className="flex h-[68px] w-[52px] flex-col items-center justify-center">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg text-xl font-bold uppercase text-white">
-              <Icons.Play className="h-5 w-5" />
-            </div>
-            <span className="mt-[1.5px] text-[11px] font-bold tracking-tighter text-white">
-              Automa...
-            </span>
-          </div>
-          <div className="flex h-[68px] w-[52px] flex-col items-center justify-center">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg text-xl font-bold uppercase text-white">
-              <Icons.Dots className="h-5 w-5" />
-            </div>
-            <span className="mt-[1.5px] text-[11px] font-bold tracking-tighter text-white">
-              More
-            </span>
-          </div>
-          <div className="mt-auto flex h-9 w-9 items-center justify-center rounded-full bg-purple-650 text-xl font-bold uppercase text-purple-100">
+          <LeftNavButton tag="Home" className="bg-purple-650">
+            <Icons.House />
+          </LeftNavButton>
+          <LeftNavButton tag="DMs">
+            <Icons.Chat />
+          </LeftNavButton>
+          <LeftNavButton tag="Activity">
+            <Icons.Bell />
+          </LeftNavButton>
+          <LeftNavButton tag="Automa...">
+            <Icons.Play />
+          </LeftNavButton>
+          <LeftNavButton tag="More">
+            <Icons.DotsHor className="hidden medium:block" />
+            <Icons.DotsVer className="block medium:hidden" />
+          </LeftNavButton>
+
+          <button className="mt-auto flex h-6 w-6 items-center justify-center rounded-full bg-purple-650 text-xl font-bold uppercase text-purple-100 medium:h-9 medium:w-9">
             <Icons.Plus className="h-5 w-5" />
-          </div>
+          </button>
           <div className="mt-[19.5px] flex w-[100%] justify-center">
-            <img
-              src="/profile.png"
-              alt="profile "
-              className="h-9 w-9 rounded-md"
-            ></img>
+            <button>
+              {" "}
+              <img
+                src="/profile.png"
+                alt="profile "
+                className="h-6 w-6 rounded-md medium:h-9 medium:w-9"
+              ></img>
+            </button>
           </div>
         </div>
 
@@ -192,6 +175,27 @@ export const TopNavButton = ({
       className={`h-[26px] w-[26px] rounded-md p-[3px] text-white hover:bg-purple-650 ${className}`}
     >
       {children}
+    </button>
+  );
+};
+export const LeftNavButton = ({
+  className,
+  children,
+  tag,
+}: StyleAttributes & Props & { tag: string }) => {
+  return (
+    <button className="group flex h-11 w-7 flex-col items-center justify-center medium:h-[68px] medium:w-[52px]">
+      <div
+        className={`duration-322 flex h-7 w-7 items-center justify-center rounded-lg text-xl font-bold uppercase text-white transition-colors delay-300 group-hover:bg-purple-650 medium:h-9 medium:w-9 ${className}`}
+      >
+        <div className="duration-322 h-5 w-5 transition-all ease-in group-hover:h-[22px] group-hover:w-[22px]">
+          {children}
+        </div>
+      </div>
+
+      <span className="mt-[1.5px] hidden text-[11px] font-bold tracking-tighter text-white medium:flex">
+        {tag}
+      </span>
     </button>
   );
 };
