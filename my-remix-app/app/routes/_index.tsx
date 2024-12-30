@@ -154,6 +154,30 @@ export default function Index() {
               <Icons.RightFold className="h-6 min-h-6 w-6 min-w-6" />
             </button>
           </div>
+          <div className="border-purple-850 w-[100%] flex-grow border-t-[1px] px-2 pt-3">
+            <div className="w-[100%]">
+              <button className="h-7 w-[100%] rounded-md pl-4 pr-2.5 text-purple-300 hover:bg-purple-400">
+                <div className="flex items-center">
+                  <Icons.Talk className="h-5 w-5" />
+                  <span className="ml-1">Threads</span>
+                </div>
+              </button>
+            </div>
+            <div className="w-[100%]">
+              <button className="h-7 w-[100%] rounded-md pl-4 pr-2.5 text-purple-300 hover:bg-purple-400">
+                <div className="flex items-center">
+                <Icons.Earphones/>
+                  <span className="ml-1">Huddles</span>
+                </div>
+              </button>
+              <button className="h-7 w-[100%] rounded-md pl-4 pr-2.5 text-purple-300 hover:bg-purple-400">
+                <div className="flex items-center">
+                <Icons.AirPlane className="w-5 h-5"/>
+                  <span className="ml-1">Drafts & sent</span>
+                </div>
+              </button>
+            </div>
+          </div>
         </div>
 
         <div
