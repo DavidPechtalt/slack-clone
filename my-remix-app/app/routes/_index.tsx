@@ -124,7 +124,7 @@ export default function Index() {
         </div>
 
         <div
-          className={`h-100% top-0 flex min-w-44 overflow-hidden rounded-l-md bg-purple-800`}
+          className={`h-100% top-0 flex min-w-44 flex-col overflow-hidden rounded-l-md bg-purple-800`}
           style={{ width: `${value}px` }}
         >
           <div className="flex h-[49px] w-[calc(100%-3px)] items-center pl-3 pr-4">
@@ -142,6 +142,18 @@ export default function Index() {
               <Icons.Pencil className="h-5 w-5" />
             </div>
           </div>
+          <div className="w-[100%] text-wrap px-4 pb-4 pt-2 text-start text-[15px]/[22px] font-semibold">
+            <button className="flex w-[100%] items-center justify-between rounded-lg bg-purple-50 px-2 py-2.5 text-purple-900">
+              <div className="flex items-center">
+                <Icons.SandClock className="h-5 min-h-5 w-5 min-w-5" />
+                <div className="ml-2 text-start tracking-tight">
+                  12 days left in trail{" "}
+                </div>
+              </div>
+
+              <Icons.RightFold className="h-6 min-h-6 w-6 min-w-6" />
+            </button>
+          </div>
         </div>
 
         <div
@@ -149,7 +161,7 @@ export default function Index() {
           style={{ cursor: `${isMoving ? "col-resize" : ""}` }}
         >
           <div
-            className="absolute z-50 h-[100%] w-[3px] cursor-col-resize transition duration-500 hover:bg-seaBlue"
+            className="absolute h-[100%] w-[3px] cursor-col-resize transition duration-500 hover:bg-seaBlue"
             onMouseDown={(e) => handleMouseDown(e)}
             role="slider"
             aria-valuemin={min}

@@ -17,6 +17,7 @@ export default {
         lightBlack: "#1a1d21",
         lightGray: "#acacad",
         purple: {
+          50: "#f9edff",
           100: "#bea9c4",
           300: "#d8c5de",
           600: "#866487",
