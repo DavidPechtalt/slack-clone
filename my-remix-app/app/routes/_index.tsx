@@ -199,7 +199,7 @@ export default function Index() {
                 background: `${isMoving ? `${fullConfig.theme.colors.seaBlue}` : ""}`,
               }}
             ></div>
-            <div className="h-[100%] flex flex-col   flex-grow">
+            <div className="flex h-[100%] flex-grow flex-col">
               <div className="flex h-[49px] min-h-[49px] w-[100%] items-center pl-5 pr-3">
                 <div className="flex flex-grow items-center justify-start bg-white">
                   <button className="flex h-[30px] items-center hover:bg-hoverGray">
@@ -251,11 +251,12 @@ export default function Index() {
                 </button>
               </div>
               <div className="flex-grow overflow-y-scroll">
-                <div className=" mt-[22px] h-[120%]  border-t-2 border-borderGray">
+                <div className="mt-[22px] h-[120%] border-t-2 border-borderGray">
                   {" "}
-                  <div className="sticky top-[22px] flex h-7  justify-center ">
-                    <div className="relative bottom-[14px] h-7 w-fit rounded-3xl border-[1px] pl-4 pr-2 text-[13px]/[27px] font-semibold bg-white">
-                      Sunday, December 29th 
+                  <div className="sticky top-[22px] flex h-7 justify-center">
+                    <div className="relative bottom-[14px] flex h-7 w-fit items-center rounded-3xl border-[1px] bg-white pl-4 pr-2 text-[13px]/[27px] font-semibold">
+                      <span>Sunday, December 29th</span>{" "}
+                      <Icons.Fold className="mx-1 h-3 min-h-3 w-3 min-w-3" />
                     </div>
                   </div>
                 </div>
