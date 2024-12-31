@@ -198,3 +198,11 @@ export function PapersFile({ className }: StyleAttributes) {
     />
   );
 }
+export function EmptyCircle({ className }: StyleAttributes) {
+  return (
+    <SvgIcon
+      d="M7 10a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-4.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9"
+      className={className}
+    />
+  );
+}

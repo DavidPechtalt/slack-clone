@@ -204,7 +204,7 @@ export default function Index() {
                 <div className="flex flex-grow items-center justify-start bg-white">
                   <button className="flex h-[30px] items-center hover:bg-hoverGray">
                     <img
-                      src="/profile.png"
+                      src="/netanel.jpg"
                       alt="profile"
                       className="h-6 w-6 rounded-md"
                     ></img>{" "}
@@ -251,6 +251,35 @@ export default function Index() {
                 </button>
               </div>
               <div className="flex-grow overflow-y-scroll">
+                <div className="w-[100%] px-5 pb-4 pt-12 ">
+                  <div className="pb-4">
+                    <div className="flex items-center">
+                      <img
+                        src="/netanel.jpg"
+                        alt="avatar"
+                        className="h-[102px] w-[102px] rounded-xl"
+                      />
+                      <div className="flex items-center">
+                        <span className="ml-2 text-lg/[27px] font-semibold">
+                          Netanel
+                        </span>{" "}
+                        <Icons.EmptyCircle className="h-5 w-5" />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="w-[100%] text-[17.6px] mb-4 font-normal">
+                    This conversation is just between{" "}
+                    <a href="/" className="bg-seaBlue/[0.2] text-blue-900">
+                      @Netanel
+                    </a>{" "}
+                    and you. Check out their profile to learn more about them.
+                  </div>
+                  <button className="rounded-lg border-2 border-borderGray px-3 mb-4  flex items-center h-9 text-[15px] font-semibold">
+                    
+                    <span className="h-fit">View Profile</span>
+                    
+                  </button>
+                </div>
                 <div className="mt-[22px] h-[120%] border-t-2 border-borderGray">
                   {" "}
                   <div className="sticky top-[22px] flex h-7 justify-center">
