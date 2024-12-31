@@ -197,7 +197,7 @@ export default function Index() {
               background: `${isMoving ? `${fullConfig.theme.colors.seaBlue}` : ""}`,
             }}
           ></div>
-          <div className="flex h-[49px] w-[100%] items-center  pl-5 pr-3">
+          <div className="flex h-[49px] w-[100%] items-center pl-5 pr-3">
             <div className="flex flex-grow items-center justify-start bg-white">
               <button className="flex h-[30px] items-center">
                 <img
@@ -210,19 +210,42 @@ export default function Index() {
                 </span>
               </button>
             </div>
-            <div className="flex h-7 w-[102.4px] items-center ">
-              <div className="border-borderGray border-[1px] flex h-[27px] w-[58px] items-center overflow-hidden rounded-lg ">
-                <button className="border-r-borderGray border-[1px] h-[26px] w-9  px-2 hover:bg-hoverGray">
+            <div className="text-fontGray flex h-7 w-[102.4px] items-center">
+              <div className="border-borderGray flex h-[27px] w-[58px] items-center overflow-hidden rounded-lg border-[1px]">
+                <button className="border-r-borderGray hover:bg-hoverGray h-[26px] w-9 border-[1px] px-2">
                   <Icons.Headphones className="h-5 w-5" />
                 </button>
-                <button className="flex h-[26px] items-center hover:bg-hoverGray">
+                <button className="hover:bg-hoverGray flex h-[26px] items-center">
                   <Icons.Fold className="h-5 w-5" />
                 </button>
               </div>{" "}
-              <button className="ml-2 flex h-[100%] w-7 items-center justify-center rounded-lg hover:bg-hoverGray">
+              <button className="hover:bg-hoverGray ml-2 flex h-[100%] w-7 items-center justify-center rounded-lg">
                 <Icons.DotsVer className="h-5 w-5" />
               </button>
             </div>
+          </div>
+          <div className="flex w-[100%] items-center border-b-[1px] pl-4 pr-3">
+            <button className="hover:bg-hoverGray flex h-[38.15px] w-fit items-center rounded-t-lg border-b-[3px] border-purple-700 p-2">
+              <Icons.SamllChat className="h-4 w-4" />
+              <span className="ml-1 text-[13px]/[18.0002px] font-medium">
+                Messages
+              </span>
+            </button>
+            <button className="hover:bg-hoverGray text-fontGray ml-1 flex h-[38.15px] w-fit items-center rounded-t-lg p-2">
+              <Icons.FoldedPaper className="h-4 w-4" />
+              <span className="ml-1 text-[13px]/[18.0002px] font-medium">
+                Weekly Sync
+              </span>
+            </button>
+            <button className="hover:bg-hoverGray text-fontGray ml-1 flex h-[38.15px] w-fit items-center rounded-t-lg p-2">
+              <Icons.PapersFile className="h-4 w-4" />
+              <span className="ml-1 text-[13px]/[18.0002px] font-medium">
+                Files
+              </span>
+            </button>
+            <button className="hover:bg-hoverGray text-black ml-1 flex h-[28.15px] w-fit items-center rounded-full  p-2">
+              <Icons.Plus className="h-4 w-4" />
+            </button>
           </div>
         </div>
       </div>
