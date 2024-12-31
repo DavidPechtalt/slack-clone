@@ -182,70 +182,85 @@ export default function Index() {
         </div>
 
         <div
-          className="relative mb-1 mr-1 flex-grow rounded-r-md bg-white"
+          className="relative mb-1 mr-1 flex flex-grow flex-col rounded-r-md bg-white"
           style={{ cursor: `${isMoving ? "col-resize" : ""}` }}
         >
-          <div
-            className="absolute h-[100%] w-[3px] cursor-col-resize transition duration-500 hover:bg-seaBlue"
-            onMouseDown={(e) => handleMouseDown(e)}
-            role="slider"
-            aria-valuemin={min}
-            aria-valuemax={windowWidth * 0.7}
-            aria-valuenow={value}
-            tabIndex={0}
-            style={{
-              background: `${isMoving ? `${fullConfig.theme.colors.seaBlue}` : ""}`,
-            }}
-          ></div>
-          <div className="flex h-[49px] w-[100%] items-center pl-5 pr-3">
-            <div className="flex flex-grow items-center justify-start bg-white">
-              <button className="flex h-[30px] items-center hover:bg-hoverGray">
-                <img
-                  src="/profile.png"
-                  alt="profile"
-                  className="h-6 w-6 rounded-md"
-                ></img>{" "}
-                <span className="ml-2 text-lg/[1.33334px] font-bold ">
-                  Netanel
-                </span>
-              </button>
-            </div>
-            <div className="text-fontGray flex h-7 w-[102.4px] items-center">
-              <div className="border-borderGray flex h-[27px] w-[58px] items-center overflow-hidden rounded-lg border-[1px]">
-                <button className="border-r-borderGray hover:bg-hoverGray h-[26px] w-9 border-[1px] px-2">
-                  <Icons.Headphones className="h-5 w-5" />
+          <div className="flex h-[100%] w-[100%]">
+            {" "}
+            <div
+              className="absolute h-[100%] w-[3px] cursor-col-resize transition duration-500 hover:bg-seaBlue"
+              onMouseDown={(e) => handleMouseDown(e)}
+              role="slider"
+              aria-valuemin={min}
+              aria-valuemax={windowWidth * 0.7}
+              aria-valuenow={value}
+              tabIndex={0}
+              style={{
+                background: `${isMoving ? `${fullConfig.theme.colors.seaBlue}` : ""}`,
+              }}
+            ></div>
+            <div className="h-[100%] flex flex-col   flex-grow">
+              <div className="flex h-[49px] min-h-[49px] w-[100%] items-center pl-5 pr-3">
+                <div className="flex flex-grow items-center justify-start bg-white">
+                  <button className="flex h-[30px] items-center hover:bg-hoverGray">
+                    <img
+                      src="/profile.png"
+                      alt="profile"
+                      className="h-6 w-6 rounded-md"
+                    ></img>{" "}
+                    <span className="ml-2 text-lg/[1.3px] font-bold">
+                      Netanel
+                    </span>
+                  </button>
+                </div>
+                <div className="flex h-7 w-[102.4px] items-center text-fontGray">
+                  <div className="flex h-[27px] w-[58px] items-center overflow-hidden rounded-lg border-[1px] border-borderGray">
+                    <button className="h-[26px] w-9 border-[1px] border-r-borderGray px-2 hover:bg-hoverGray">
+                      <Icons.Headphones className="h-5 w-5" />
+                    </button>
+                    <button className="flex h-[26px] items-center hover:bg-hoverGray">
+                      <Icons.Fold className="h-5 w-5" />
+                    </button>
+                  </div>{" "}
+                  <button className="ml-2 flex h-[100%] w-7 items-center justify-center rounded-lg hover:bg-hoverGray">
+                    <Icons.DotsVer className="h-5 w-5" />
+                  </button>
+                </div>
+              </div>
+              <div className="flex w-[100%] items-center border-b-[1px] pl-4 pr-3">
+                <button className="flex h-[38.15px] w-fit items-center rounded-t-lg border-b-[3px] border-purple-700 p-2 hover:bg-hoverGray">
+                  <Icons.SamllChat className="h-4 w-4" />
+                  <span className="ml-1 text-[13px]/[18.0002px] font-medium">
+                    Messages
+                  </span>
                 </button>
-                <button className="hover:bg-hoverGray flex h-[26px] items-center">
-                  <Icons.Fold className="h-5 w-5" />
+                <button className="ml-1 flex h-[38.15px] w-fit items-center rounded-t-lg p-2 text-fontGray hover:bg-hoverGray">
+                  <Icons.FoldedPaper className="h-4 w-4" />
+                  <span className="ml-1 text-[13px]/[18.0002px] font-medium">
+                    Weekly Sync
+                  </span>
                 </button>
-              </div>{" "}
-              <button className="hover:bg-hoverGray ml-2 flex h-[100%] w-7 items-center justify-center rounded-lg">
-                <Icons.DotsVer className="h-5 w-5" />
-              </button>
+                <button className="ml-1 flex h-[38.15px] w-fit items-center rounded-t-lg p-2 text-fontGray hover:bg-hoverGray">
+                  <Icons.PapersFile className="h-4 w-4" />
+                  <span className="ml-1 text-[13px]/[18.0002px] font-medium">
+                    Files
+                  </span>
+                </button>
+                <button className="ml-1 flex h-[28.15px] w-fit items-center rounded-full p-2 text-black hover:bg-hoverGray">
+                  <Icons.Plus className="h-4 w-4" />
+                </button>
+              </div>
+              <div className="flex-grow overflow-y-scroll">
+                <div className=" mt-[22px] h-[120%]  border-t-2 border-borderGray">
+                  {" "}
+                  <div className="sticky top-[22px] flex h-7  justify-center ">
+                    <div className="relative bottom-[14px] h-7 w-fit rounded-3xl border-[1px] pl-4 pr-2 text-[13px]/[27px] font-semibold bg-white">
+                      Sunday, December 29th 
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="flex w-[100%] items-center border-b-[1px] pl-4 pr-3">
-            <button className="hover:bg-hoverGray flex h-[38.15px] w-fit items-center rounded-t-lg border-b-[3px] border-purple-700 p-2">
-              <Icons.SamllChat className="h-4 w-4" />
-              <span className="ml-1 text-[13px]/[18.0002px] font-medium">
-                Messages
-              </span>
-            </button>
-            <button className="hover:bg-hoverGray text-fontGray ml-1 flex h-[38.15px] w-fit items-center rounded-t-lg p-2">
-              <Icons.FoldedPaper className="h-4 w-4" />
-              <span className="ml-1 text-[13px]/[18.0002px] font-medium">
-                Weekly Sync
-              </span>
-            </button>
-            <button className="hover:bg-hoverGray text-fontGray ml-1 flex h-[38.15px] w-fit items-center rounded-t-lg p-2">
-              <Icons.PapersFile className="h-4 w-4" />
-              <span className="ml-1 text-[13px]/[18.0002px] font-medium">
-                Files
-              </span>
-            </button>
-            <button className="hover:bg-hoverGray text-black ml-1 flex h-[28.15px] w-fit items-center rounded-full  p-2">
-              <Icons.Plus className="h-4 w-4" />
-            </button>
           </div>
         </div>
       </div>
