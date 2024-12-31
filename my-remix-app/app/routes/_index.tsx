@@ -199,13 +199,13 @@ export default function Index() {
           ></div>
           <div className="flex h-[49px] w-[100%] items-center pl-5 pr-3">
             <div className="flex flex-grow items-center justify-start bg-white">
-              <button className="flex h-[30px] items-center">
+              <button className="flex h-[30px] items-center hover:bg-hoverGray">
                 <img
                   src="/profile.png"
                   alt="profile"
                   className="h-6 w-6 rounded-md"
                 ></img>{" "}
-                <span className="ml-2 text-lg/[1.33334px] font-bold">
+                <span className="ml-2 text-lg/[1.33334px] font-bold ">
                   Netanel
                 </span>
               </button>
