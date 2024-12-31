@@ -212,14 +212,14 @@ export default function Index() {
             </div>
             <div className="flex h-7 w-[102.4px] items-center ">
               <div className="border-borderGray border-[1px] flex h-[27px] w-[58px] items-center overflow-hidden rounded-lg ">
-                <button className="border-r-borderGray border-[1px] h-[26px] w-9  px-2 hover:bg-gray-400/45">
+                <button className="border-r-borderGray border-[1px] h-[26px] w-9  px-2 hover:bg-hoverGray">
                   <Icons.Headphones className="h-5 w-5" />
                 </button>
-                <button className="flex h-[26px] items-center hover:bg-gray-400/45">
+                <button className="flex h-[26px] items-center hover:bg-hoverGray">
                   <Icons.Fold className="h-5 w-5" />
                 </button>
               </div>{" "}
-              <button className="ml-2 flex h-[100%] w-7 items-center justify-center rounded-lg hover:bg-gray-400/45">
+              <button className="ml-2 flex h-[100%] w-7 items-center justify-center rounded-lg hover:bg-hoverGray">
                 <Icons.DotsVer className="h-5 w-5" />
               </button>
             </div>
