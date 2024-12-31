@@ -166,17 +166,18 @@ export default function Index() {
             <div className="w-[100%]">
               <button className="h-7 w-[100%] rounded-md pl-4 pr-2.5 text-purple-300 hover:bg-purple-400">
                 <div className="flex items-center">
-                <Icons.Earphones/>
+                  <Icons.Earphones />
                   <span className="ml-1">Huddles</span>
                 </div>
               </button>
               <button className="h-7 w-[100%] rounded-md pl-4 pr-2.5 text-purple-300 hover:bg-purple-400">
                 <div className="flex items-center">
-                <Icons.AirPlane className="w-5 h-5"/>
+                  <Icons.AirPlane className="h-5 w-5" />
                   <span className="ml-1">Drafts & sent</span>
                 </div>
               </button>
             </div>
+            <div className="w-[100%]"></div>
           </div>
         </div>
 
