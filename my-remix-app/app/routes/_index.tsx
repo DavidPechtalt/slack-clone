@@ -87,7 +87,7 @@ export default function Index() {
         className="relative flex h-[calc(100vh-40px)] w-[100vw] overflow-hidden bg-purple-900"
         style={{ cursor: `${isMoving ? "col-resize" : ""}` }}
       >
-        <div className="flex w-12 flex-col items-center justify-start pb-6 pt-2.5 medium:w-[70px] medium:pt-2">
+        <div className="flex w-12 min-w-12 flex-col items-center justify-start pb-6 pt-2.5 medium:w-[70px] medium:pt-2">
           <div className="mb-[9px] flex h-6 w-6 items-center justify-center rounded-md bg-lightGray text-[13px] font-bold uppercase text-lightBlack medium:mb-[18px] medium:h-9 medium:w-9 medium:text-xl">
             rv
           </div>
