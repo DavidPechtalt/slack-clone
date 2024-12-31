@@ -133,7 +133,7 @@ export default function Index() {
                 RavTech Venn Introduction
               </span>
 
-              <Icons.Fold className="mt-[3px] h-[18px] w-[18px]" />
+              <Icons.Fold className="mt-[3px] h-[18px] min-h-[18px] w-[18px] min-w-[18px]" />
             </button>
             <div className="ml-auto flex h-9 w-9 items-center justify-center rounded-lg text-xl text-purple-300">
               <Icons.ThreeLines className="h-5 w-5" />
@@ -154,7 +154,7 @@ export default function Index() {
               <Icons.RightFold className="h-6 min-h-6 w-6 min-w-6" />
             </button>
           </div>
-          <div className="border-purple-850 w-[100%] flex-grow border-t-[1px] px-2 pt-3">
+          <div className="w-[100%] flex-grow border-t-[1px] border-purple-850 px-2 pt-3">
             <div className="w-[100%]">
               <button className="h-7 w-[100%] rounded-md pl-4 pr-2.5 text-purple-300 hover:bg-purple-400">
                 <div className="flex items-center">
@@ -166,7 +166,7 @@ export default function Index() {
             <div className="w-[100%]">
               <button className="h-7 w-[100%] rounded-md pl-4 pr-2.5 text-purple-300 hover:bg-purple-400">
                 <div className="flex items-center">
-                  <Icons.Earphones />
+                  <Icons.Headphones className="h-5 w-5" />
                   <span className="ml-1">Huddles</span>
                 </div>
               </button>
@@ -197,6 +197,33 @@ export default function Index() {
               background: `${isMoving ? `${fullConfig.theme.colors.seaBlue}` : ""}`,
             }}
           ></div>
+          <div className="flex h-[49px] w-[100%] items-center  pl-5 pr-3">
+            <div className="flex flex-grow items-center justify-start bg-white">
+              <button className="flex h-[30px] items-center">
+                <img
+                  src="/profile.png"
+                  alt="profile"
+                  className="h-6 w-6 rounded-md"
+                ></img>{" "}
+                <span className="ml-2 text-lg/[1.33334px] font-bold">
+                  Netanel
+                </span>
+              </button>
+            </div>
+            <div className="flex h-7 w-[102.4px] items-center ">
+              <div className="border-borderGray border-[1px] flex h-[27px] w-[58px] items-center overflow-hidden rounded-lg ">
+                <button className="border-r-borderGray border-[1px] h-[26px] w-9  px-2 hover:bg-gray-400/45">
+                  <Icons.Headphones className="h-5 w-5" />
+                </button>
+                <button className="flex h-[26px] items-center hover:bg-gray-400/45">
+                  <Icons.Fold className="h-5 w-5" />
+                </button>
+              </div>{" "}
+              <button className="ml-2 flex h-[100%] w-7 items-center justify-center rounded-lg hover:bg-gray-400/45">
+                <Icons.DotsVer className="h-5 w-5" />
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

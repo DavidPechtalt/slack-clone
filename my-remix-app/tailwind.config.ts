@@ -16,6 +16,7 @@ export default {
         seaBlue: "#1d9bd1",
         lightBlack: "#1a1d21",
         lightGray: "#acacad",
+        borderGray:"#ebebeb",
         purple: {
           50: "#f9edff",
           100: "#bea9c4",
