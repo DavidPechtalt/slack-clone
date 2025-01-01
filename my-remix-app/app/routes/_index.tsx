@@ -250,156 +250,158 @@ export default function Index() {
                   <Icons.Plus className="h-4 w-4" />
                 </button>
               </div>
-
-              <div className="w-[100%] px-5 pb-4 pt-12">
-                <div className="pb-4">
-                  <div className="flex items-center">
-                    <img
-                      src="/netanel.jpg"
-                      alt="avatar"
-                      className="h-[102px] w-[102px] rounded-xl"
-                    />
+              <div className="flex-grow overflow-y-scroll">
+                <div className="w-[100%] px-5 pb-4 pt-12">
+                  <div className="pb-4">
                     <div className="flex items-center">
-                      <span className="ml-2 text-lg/[27px] font-semibold">
-                        Netanel
-                      </span>{" "}
-                      <Icons.EmptyCircle className="h-5 w-5" />
+                      <img
+                        src="/netanel.jpg"
+                        alt="avatar"
+                        className="h-[102px] w-[102px] rounded-xl"
+                      />
+                      <div className="flex items-center">
+                        <span className="ml-2 text-lg/[27px] font-semibold">
+                          Netanel
+                        </span>{" "}
+                        <Icons.EmptyCircle className="h-5 w-5" />
+                      </div>
                     </div>
                   </div>
+                  <div className="mb-4 w-[100%] text-[17.6px] font-normal">
+                    This conversation is just between{" "}
+                    <a href="/" className="bg-seaBlue/[0.2] text-blue-900">
+                      @Netanel
+                    </a>{" "}
+                    and you. Check out their profile to learn more about them.
+                  </div>
+                  <button className="mb-4 flex h-9 items-center rounded-lg border-2 border-borderGray px-3 text-[15px] font-semibold">
+                    <span className="h-fit">View Profile</span>
+                  </button>
                 </div>
-                <div className="mb-4 w-[100%] text-[17.6px] font-normal">
-                  This conversation is just between{" "}
-                  <a href="/" className="bg-seaBlue/[0.2] text-blue-900">
-                    @Netanel
-                  </a>{" "}
-                  and you. Check out their profile to learn more about them.
-                </div>
-                <button className="mb-4 flex h-9 items-center rounded-lg border-2 border-borderGray px-3 text-[15px] font-semibold">
-                  <span className="h-fit">View Profile</span>
-                </button>
-              </div>
-              <Day date="October 3rd, 2024">
-                <Message
-                  src="/profile.png"
-                  name="David Pechtalt"
-                  time="08:22 AM"
-                >
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-                  laudantium illo quibusdam, vel dolor harum facere incidunt.
-                  Aliquid, sapiente labore, id similique quaerat, temporibus
-                  harum debitis unde iusto ratione eos quidem! Obcaecati
-                  voluptatum dignissimos quod minus assumenda modi tempore esse
-                  magnam voluptatibus expedita cupiditate sequi, consequatur eum
-                  ipsa quo eaque maiores quibusdam atque non nobis optio.
-                  Voluptatem, placeat ab eum quasi similique accusantium. Quia,
-                  modi. Velit sapiente minima sequi soluta?
-                </Message>
-                <Message src="/netanel.jpg" name="Netanel" time="10:11 AM">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-                  corrupti sed, totam necessitatibus placeat neque distinctio
-                  nemo laboriosam exercitationem non! Voluptate reiciendis
-                  consequatur debitis accusantium cumque nostrum explicabo est
-                  deserunt repellat sit, fuga quas eaque, consectetur optio,
-                  nulla ab nam assumenda repellendus? Unde vero quam id,
-                  sapiente fugit voluptatum cumque nostrum porro consequatur
-                  suscipit nemo consequuntur aliquid ea dolore modi enim sit
-                  delectus repudiandae saepe eaque dolorum architecto, numquam
-                  excepturi asperiores? A nihil eius facilis aperiam, molestiae
-                  atque modi minima veniam aut officia perspiciatis labore est
-                  exercitationem expedita officiis ipsa beatae voluptate, quia
-                  sit assumenda. Voluptatem vel cum natus sed!
-                </Message>
-              </Day>
+                <Day date="October 3rd, 2024">
+                  <Message
+                    src="/profile.png"
+                    name="David Pechtalt"
+                    time="08:22 AM"
+                  >
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Enim laudantium illo quibusdam, vel dolor harum facere
+                    incidunt. Aliquid, sapiente labore, id similique quaerat,
+                    temporibus harum debitis unde iusto ratione eos quidem!
+                    Obcaecati voluptatum dignissimos quod minus assumenda modi
+                    tempore esse magnam voluptatibus expedita cupiditate sequi,
+                    consequatur eum ipsa quo eaque maiores quibusdam atque non
+                    nobis optio. Voluptatem, placeat ab eum quasi similique
+                    accusantium. Quia, modi. Velit sapiente minima sequi soluta?
+                  </Message>
+                  <Message src="/netanel.jpg" name="Netanel" time="10:11 AM">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Iure corrupti sed, totam necessitatibus placeat neque
+                    distinctio nemo laboriosam exercitationem non! Voluptate
+                    reiciendis consequatur debitis accusantium cumque nostrum
+                    explicabo est deserunt repellat sit, fuga quas eaque,
+                    consectetur optio, nulla ab nam assumenda repellendus? Unde
+                    vero quam id, sapiente fugit voluptatum cumque nostrum porro
+                    consequatur suscipit nemo consequuntur aliquid ea dolore
+                    modi enim sit delectus repudiandae saepe eaque dolorum
+                    architecto, numquam excepturi asperiores? A nihil eius
+                    facilis aperiam, molestiae atque modi minima veniam aut
+                    officia perspiciatis labore est exercitationem expedita
+                    officiis ipsa beatae voluptate, quia sit assumenda.
+                    Voluptatem vel cum natus sed!
+                  </Message>
+                </Day>
 
-              <Day date="December 2nd, 2024">
-                <Message src="/netanel.jpg" name="Netanel" time="10:11 AM">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad,
-                  delectus voluptatibus sapiente, a fuga ex iusto, beatae nulla
-                  architecto optio atque tenetur debitis velit. At maiores natus
-                  quis expedita asperiores aperiam eaque dolore accusamus
-                  blanditiis. Voluptatum illum laudantium tenetur ea neque, iste
-                  reiciendis, veniam aperiam, sint quae culpa quis accusantium
-                  sit beatae. Rerum mollitia quidem, odit pariatur molestiae,
-                  aspernatur veniam repellat asperiores obcaecati animi
-                  necessitatibus.
-                </Message>
-                <Message
-                  src="/profile.png"
-                  name="David Pechtalt"
-                  time="08:22 AM"
-                >
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Earum, quia magnam, optio est tempora voluptate dolores fugiat
-                  nihil debitis autem enim cupiditate architecto corrupti
-                  maiores aut similique qui maxime voluptas alias neque eum.
-                  Voluptas quos quasi quibusdam dolorem vel quo ut id doloremque
-                  corrupti fugiat, placeat quidem quisquam impedit error
-                  excepturi cupiditate aut deleniti vitae quia aliquid
-                  laudantium illum iste! Tempora placeat impedit fugit
-                  reprehenderit sed! Deserunt corporis sit, dolor, qui nesciunt
-                  itaque, minus debitis deleniti maxime ab quasi quam. Tenetur
-                  quia ut beatae voluptatem aperiam commodi ex laborum?
-                  Voluptatem, recusandae itaque!
-                </Message>
-                <Message src="/netanel.jpg" name="Netanel" time="10:11 AM">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad,
-                  delectus voluptatibus sapiente, a fuga ex iusto, beatae nulla
-                  architecto optio atque tenetur debitis velit. At maiores natus
-                  quis expedita asperiores aperiam eaque dolore accusamus
-                  blanditiis. Voluptatum illum laudantium tenetur ea neque, iste
-                  reiciendis, veniam aperiam, sint quae culpa quis accusantium
-                  sit beatae. Rerum mollitia quidem, odit pariatur molestiae,
-                  aspernatur veniam repellat asperiores obcaecati animi
-                  necessitatibus.
-                </Message>
-                <Message
-                  src="/profile.png"
-                  name="David Pechtalt"
-                  time="08:22 AM"
-                >
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Earum, quia magnam, optio est tempora voluptate dolores fugiat
-                  nihil debitis autem enim cupiditate architecto corrupti
-                  maiores aut similique qui maxime voluptas alias neque eum.
-                  Voluptas quos quasi quibusdam dolorem vel quo ut id doloremque
-                  corrupti fugiat, placeat quidem quisquam impedit error
-                  excepturi cupiditate aut deleniti vitae quia aliquid
-                  laudantium illum iste! Tempora placeat impedit fugit
-                  reprehenderit sed! Deserunt corporis sit, dolor, qui nesciunt
-                  itaque, minus debitis deleniti maxime ab quasi quam. Tenetur
-                  quia ut beatae voluptatem aperiam commodi ex laborum?
-                  Voluptatem, recusandae itaque!
-                </Message>
-                <Message src="/netanel.jpg" name="Netanel" time="10:11 AM">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad,
-                  delectus voluptatibus sapiente, a fuga ex iusto, beatae nulla
-                  architecto optio atque tenetur debitis velit. At maiores natus
-                  quis expedita asperiores aperiam eaque dolore accusamus
-                  blanditiis. Voluptatum illum laudantium tenetur ea neque, iste
-                  reiciendis, veniam aperiam, sint quae culpa quis accusantium
-                  sit beatae. Rerum mollitia quidem, odit pariatur molestiae,
-                  aspernatur veniam repellat asperiores obcaecati animi
-                  necessitatibus.
-                </Message>
-                <Message
-                  src="/profile.png"
-                  name="David Pechtalt"
-                  time="08:22 AM"
-                >
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Earum, quia magnam, optio est tempora voluptate dolores fugiat
-                  nihil debitis autem enim cupiditate architecto corrupti
-                  maiores aut similique qui maxime voluptas alias neque eum.
-                  Voluptas quos quasi quibusdam dolorem vel quo ut id doloremque
-                  corrupti fugiat, placeat quidem quisquam impedit error
-                  excepturi cupiditate aut deleniti vitae quia aliquid
-                  laudantium illum iste! Tempora placeat impedit fugit
-                  reprehenderit sed! Deserunt corporis sit, dolor, qui nesciunt
-                  itaque, minus debitis deleniti maxime ab quasi quam. Tenetur
-                  quia ut beatae voluptatem aperiam commodi ex laborum?
-                  Voluptatem, recusandae itaque!
-                </Message>
-              </Day>
+                <Day date="December 2nd, 2024">
+                  <Message src="/netanel.jpg" name="Netanel" time="10:11 AM">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Ad, delectus voluptatibus sapiente, a fuga ex iusto, beatae
+                    nulla architecto optio atque tenetur debitis velit. At
+                    maiores natus quis expedita asperiores aperiam eaque dolore
+                    accusamus blanditiis. Voluptatum illum laudantium tenetur ea
+                    neque, iste reiciendis, veniam aperiam, sint quae culpa quis
+                    accusantium sit beatae. Rerum mollitia quidem, odit pariatur
+                    molestiae, aspernatur veniam repellat asperiores obcaecati
+                    animi necessitatibus.
+                  </Message>
+                  <Message
+                    src="/profile.png"
+                    name="David Pechtalt"
+                    time="08:22 AM"
+                  >
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Earum, quia magnam, optio est tempora voluptate dolores
+                    fugiat nihil debitis autem enim cupiditate architecto
+                    corrupti maiores aut similique qui maxime voluptas alias
+                    neque eum. Voluptas quos quasi quibusdam dolorem vel quo ut
+                    id doloremque corrupti fugiat, placeat quidem quisquam
+                    impedit error excepturi cupiditate aut deleniti vitae quia
+                    aliquid laudantium illum iste! Tempora placeat impedit fugit
+                    reprehenderit sed! Deserunt corporis sit, dolor, qui
+                    nesciunt itaque, minus debitis deleniti maxime ab quasi
+                    quam. Tenetur quia ut beatae voluptatem aperiam commodi ex
+                    laborum? Voluptatem, recusandae itaque!
+                  </Message>
+                  <Message src="/netanel.jpg" name="Netanel" time="10:11 AM">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Ad, delectus voluptatibus sapiente, a fuga ex iusto, beatae
+                    nulla architecto optio atque tenetur debitis velit. At
+                    maiores natus quis expedita asperiores aperiam eaque dolore
+                    accusamus blanditiis. Voluptatum illum laudantium tenetur ea
+                    neque, iste reiciendis, veniam aperiam, sint quae culpa quis
+                    accusantium sit beatae. Rerum mollitia quidem, odit pariatur
+                    molestiae, aspernatur veniam repellat asperiores obcaecati
+                    animi necessitatibus.
+                  </Message>
+                  <Message
+                    src="/profile.png"
+                    name="David Pechtalt"
+                    time="08:22 AM"
+                  >
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Earum, quia magnam, optio est tempora voluptate dolores
+                    fugiat nihil debitis autem enim cupiditate architecto
+                    corrupti maiores aut similique qui maxime voluptas alias
+                    neque eum. Voluptas quos quasi quibusdam dolorem vel quo ut
+                    id doloremque corrupti fugiat, placeat quidem quisquam
+                    impedit error excepturi cupiditate aut deleniti vitae quia
+                    aliquid laudantium illum iste! Tempora placeat impedit fugit
+                    reprehenderit sed! Deserunt corporis sit, dolor, qui
+                    nesciunt itaque, minus debitis deleniti maxime ab quasi
+                    quam. Tenetur quia ut beatae voluptatem aperiam commodi ex
+                    laborum? Voluptatem, recusandae itaque!
+                  </Message>
+                  <Message src="/netanel.jpg" name="Netanel" time="10:11 AM">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Ad, delectus voluptatibus sapiente, a fuga ex iusto, beatae
+                    nulla architecto optio atque tenetur debitis velit. At
+                    maiores natus quis expedita asperiores aperiam eaque dolore
+                    accusamus blanditiis. Voluptatum illum laudantium tenetur ea
+                    neque, iste reiciendis, veniam aperiam, sint quae culpa quis
+                    accusantium sit beatae. Rerum mollitia quidem, odit pariatur
+                    molestiae, aspernatur veniam repellat asperiores obcaecati
+                    animi necessitatibus.
+                  </Message>
+                  <Message
+                    src="/profile.png"
+                    name="David Pechtalt"
+                    time="08:22 AM"
+                  >
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Earum, quia magnam, optio est tempora voluptate dolores
+                    fugiat nihil debitis autem enim cupiditate architecto
+                    corrupti maiores aut similique qui maxime voluptas alias
+                    neque eum. Voluptas quos quasi quibusdam dolorem vel quo ut
+                    id doloremque corrupti fugiat, placeat quidem quisquam
+                    impedit error excepturi cupiditate aut deleniti vitae quia
+                    aliquid laudantium illum iste! Tempora placeat impedit fugit
+                    reprehenderit sed! Deserunt corporis sit, dolor, qui
+                    nesciunt itaque, minus debitis deleniti maxime ab quasi
+                    quam. Tenetur quia ut beatae voluptatem aperiam commodi ex
+                    laborum? Voluptatem, recusandae itaque!
+                  </Message>
+                </Day>
+              </div>
             </div>
           </div>
         </div>
