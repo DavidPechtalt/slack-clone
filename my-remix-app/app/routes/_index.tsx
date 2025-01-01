@@ -10,7 +10,6 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
-
   const [value, setValue] = useState<number>(176);
   const [windowWidth, setWindowWidth] = useState<number>(0);
   const [isMoving, setIsMoving] = useState<boolean>(false);
@@ -82,7 +81,7 @@ export default function Index() {
         </div>
       </div>
       <div
-        className={`relative flex h-[calc(100vh-40px)] w-[100vw] overflow-hidden bg-purple-900 ${isMoving? "cursor-col-resize select-none":""}`}
+        className={`relative flex h-[calc(100vh-40px)] w-[100vw] overflow-hidden bg-purple-900 ${isMoving ? "cursor-col-resize select-none" : ""}`}
       >
         <div className="flex w-12 min-w-12 flex-col items-center justify-start pb-6 pt-2.5 medium:w-[70px] medium:min-w-[70px] medium:pt-2">
           <div className="mb-[9px] flex h-6 w-6 items-center justify-center rounded-md bg-lightGray text-[13px] font-bold uppercase text-lightBlack medium:mb-[18px] medium:h-9 medium:w-9 medium:text-xl">
@@ -179,13 +178,12 @@ export default function Index() {
         </div>
 
         <div
-          className={`relative mb-1 mr-1 flex-grow rounded-r-md bg-white ${isMoving?"cursor-col-resize":""}`}
-         
+          className={`relative mb-1 mr-1 flex-grow rounded-r-md bg-white ${isMoving ? "cursor-col-resize" : ""}`}
         >
           <div className="flex h-[100%] w-[100%]">
             {" "}
             <div
-              className={`absolute h-[100%] w-[3px] cursor-col-resize transition duration-500 hover:bg-seaBlue ${isMoving?"bg-seaBlue":""}`}
+              className={`absolute h-[100%] w-[3px] cursor-col-resize transition duration-500 hover:bg-seaBlue ${isMoving ? "bg-seaBlue" : ""}`}
               onMouseDown={(e) => handleMouseDown(e)}
               role="slider"
               aria-valuemin={min}
@@ -425,6 +423,47 @@ export default function Index() {
                   </Message>
                 </Day>
               </div>
+              <div className="min-h-[144px] shrink-0 px-5 pb-3 h-fit">
+                <div className="flex min-h-[100%] w-[100%] flex-col rounded-lg border-[1px] border-borderGray">
+                  <div className="flex h-10 bg-hoverGray p-1">
+                    <BoxTopButton>
+                      <Icons.Bold className="h-[18px] w-[18px]" />
+                    </BoxTopButton>
+                    <BoxTopButton>
+                      <Icons.Italic className="h-[18px] w-[18px]" />
+                    </BoxTopButton>
+                    <BoxTopButton>
+                      <Icons.Strike className="h-[18px] w-[18px]" />
+                    </BoxTopButton>
+                    <BoxDivider />
+                    <BoxTopButton>
+                      <Icons.Link className="h-[18px] w-[18px]" />
+                    </BoxTopButton>
+                    <BoxTopButton>
+                      <Icons.OrderedList className="h-[18px] w-[18px]" />
+                    </BoxTopButton>
+                    <BoxTopButton>
+                      <Icons.BulletList className="h-[18px] w-[18px]" />
+                    </BoxTopButton>
+                    <BoxDivider />
+                    <BoxTopButton>
+                      <Icons.BlockQuote className="h-[18px] w-[18px]" />
+                    </BoxTopButton>
+                    <BoxTopButton>
+                      <Icons.Code className="h-[18px] w-[18px]" />
+                    </BoxTopButton>
+                    <BoxTopButton>
+                      <Icons.CodeBlock className="h-[18px] w-[18px]" />
+                    </BoxTopButton>
+                  </div>
+                  <div className="w-[100%] h-fit px-3 py-2">
+                    <textarea
+                      placeholder="Message Netanel"
+                      className="w-[100%] outline-none resize-none"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -474,7 +513,7 @@ export const Message = ({
   time,
 }: Props & { name: string; src: string; time: string }) => {
   return (
-    <div className="flex w-[100%] px-5 py-2">
+    <div className="flex w-[100%] px-5 py-2 hover:bg-hoverGray">
       <div className="mr-2 flex h-[100%] flex-col items-start justify-start">
         <img
           src={`${src}`}
@@ -487,7 +526,7 @@ export const Message = ({
           <button className="text-[15px]/[22px] font-bold hover:underline">
             {name}
           </button>
-          <button className="text-lightFontGray ml-2 mt-[2px] h-[100%] text-xs font-normal tracking-wide">
+          <button className="ml-2 mt-[2px] h-[100%] text-xs font-normal tracking-wide text-lightFontGray">
             {time}
           </button>
         </div>
@@ -510,4 +549,16 @@ export const Day = ({ date, children }: { date: string } & Props) => {
       {children}
     </div>
   );
+};
+
+export const BoxTopButton = ({ children }: Props) => {
+  return (
+    <div className="m-[2px] mr-2.5 h-4 w-4 p-[2px] text-[#a8a8a8]">
+      {children}
+    </div>
+  );
+};
+
+export const BoxDivider = () => {
+  return <div className="ml-1.5 mr-2.5 mt-1 h-4 w-[1px] bg-[#a8a8a8]"></div>;
 };
