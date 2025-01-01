@@ -19,6 +19,7 @@ export default {
         borderGray:"#ebebeb",
         hoverGray: "#f7f7f7",
         fontGray: "#1d1c1d",
+        lightFontGray:"#616061",
         purple: {
           50: "#f9edff",
           100: "#bea9c4",

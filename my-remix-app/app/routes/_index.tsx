@@ -251,7 +251,7 @@ export default function Index() {
                 </button>
               </div>
               <div className="flex-grow overflow-y-scroll">
-                <div className="w-[100%] px-5 pb-4 pt-12 ">
+                <div className="w-[100%] px-5 pb-4 pt-12">
                   <div className="pb-4">
                     <div className="flex items-center">
                       <img
@@ -267,28 +267,139 @@ export default function Index() {
                       </div>
                     </div>
                   </div>
-                  <div className="w-[100%] text-[17.6px] mb-4 font-normal">
+                  <div className="mb-4 w-[100%] text-[17.6px] font-normal">
                     This conversation is just between{" "}
                     <a href="/" className="bg-seaBlue/[0.2] text-blue-900">
                       @Netanel
                     </a>{" "}
                     and you. Check out their profile to learn more about them.
                   </div>
-                  <button className="rounded-lg border-2 border-borderGray px-3 mb-4  flex items-center h-9 text-[15px] font-semibold">
-                    
+                  <button className="mb-4 flex h-9 items-center rounded-lg border-2 border-borderGray px-3 text-[15px] font-semibold">
                     <span className="h-fit">View Profile</span>
-                    
                   </button>
                 </div>
-                <div className="mt-[22px] h-[120%] border-t-2 border-borderGray">
-                  {" "}
-                  <div className="sticky top-[22px] flex h-7 justify-center">
-                    <div className="relative bottom-[14px] flex h-7 w-fit items-center rounded-3xl border-[1px] bg-white pl-4 pr-2 text-[13px]/[27px] font-semibold">
-                      <span>Sunday, December 29th</span>{" "}
-                      <Icons.Fold className="mx-1 h-3 min-h-3 w-3 min-w-3" />
-                    </div>
-                  </div>
-                </div>
+               <Day date="October 3rd, 2024">
+                  <Message
+                    src="/profile.png"
+                    name="David Pechtalt"
+                    time="08:22 AM"
+                  >
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Enim laudantium illo quibusdam, vel dolor harum facere
+                    incidunt. Aliquid, sapiente labore, id similique quaerat,
+                    temporibus harum debitis unde iusto ratione eos quidem!
+                    Obcaecati voluptatum dignissimos quod minus assumenda modi
+                    tempore esse magnam voluptatibus expedita cupiditate sequi,
+                    consequatur eum ipsa quo eaque maiores quibusdam atque non
+                    nobis optio. Voluptatem, placeat ab eum quasi similique
+                    accusantium. Quia, modi. Velit sapiente minima sequi soluta?
+                  </Message>
+                  <Message src="/netanel.jpg" name="Netanel" time="10:11 AM">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Iure corrupti sed, totam necessitatibus placeat neque
+                    distinctio nemo laboriosam exercitationem non! Voluptate
+                    reiciendis consequatur debitis accusantium cumque nostrum
+                    explicabo est deserunt repellat sit, fuga quas eaque,
+                    consectetur optio, nulla ab nam assumenda repellendus? Unde
+                    vero quam id, sapiente fugit voluptatum cumque nostrum porro
+                    consequatur suscipit nemo consequuntur aliquid ea dolore
+                    modi enim sit delectus repudiandae saepe eaque dolorum
+                    architecto, numquam excepturi asperiores? A nihil eius
+                    facilis aperiam, molestiae atque modi minima veniam aut
+                    officia perspiciatis labore est exercitationem expedita
+                    officiis ipsa beatae voluptate, quia sit assumenda.
+                    Voluptatem vel cum natus sed!
+                  </Message></Day>
+                
+                <Day date="December 2nd, 2024">
+                  <Message src="/netanel.jpg" name="Netanel" time="10:11 AM">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Ad, delectus voluptatibus sapiente, a fuga ex iusto, beatae
+                    nulla architecto optio atque tenetur debitis velit. At
+                    maiores natus quis expedita asperiores aperiam eaque dolore
+                    accusamus blanditiis. Voluptatum illum laudantium tenetur ea
+                    neque, iste reiciendis, veniam aperiam, sint quae culpa quis
+                    accusantium sit beatae. Rerum mollitia quidem, odit pariatur
+                    molestiae, aspernatur veniam repellat asperiores obcaecati
+                    animi necessitatibus.
+                  </Message>
+                  <Message
+                    src="/profile.png"
+                    name="David Pechtalt"
+                    time="08:22 AM"
+                  >
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Earum, quia magnam, optio est tempora voluptate dolores
+                    fugiat nihil debitis autem enim cupiditate architecto
+                    corrupti maiores aut similique qui maxime voluptas alias
+                    neque eum. Voluptas quos quasi quibusdam dolorem vel quo ut
+                    id doloremque corrupti fugiat, placeat quidem quisquam
+                    impedit error excepturi cupiditate aut deleniti vitae quia
+                    aliquid laudantium illum iste! Tempora placeat impedit fugit
+                    reprehenderit sed! Deserunt corporis sit, dolor, qui
+                    nesciunt itaque, minus debitis deleniti maxime ab quasi
+                    quam. Tenetur quia ut beatae voluptatem aperiam commodi ex
+                    laborum? Voluptatem, recusandae itaque!
+                  </Message>
+                  <Message src="/netanel.jpg" name="Netanel" time="10:11 AM">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Ad, delectus voluptatibus sapiente, a fuga ex iusto, beatae
+                    nulla architecto optio atque tenetur debitis velit. At
+                    maiores natus quis expedita asperiores aperiam eaque dolore
+                    accusamus blanditiis. Voluptatum illum laudantium tenetur ea
+                    neque, iste reiciendis, veniam aperiam, sint quae culpa quis
+                    accusantium sit beatae. Rerum mollitia quidem, odit pariatur
+                    molestiae, aspernatur veniam repellat asperiores obcaecati
+                    animi necessitatibus.
+                  </Message>
+                  <Message
+                    src="/profile.png"
+                    name="David Pechtalt"
+                    time="08:22 AM"
+                  >
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Earum, quia magnam, optio est tempora voluptate dolores
+                    fugiat nihil debitis autem enim cupiditate architecto
+                    corrupti maiores aut similique qui maxime voluptas alias
+                    neque eum. Voluptas quos quasi quibusdam dolorem vel quo ut
+                    id doloremque corrupti fugiat, placeat quidem quisquam
+                    impedit error excepturi cupiditate aut deleniti vitae quia
+                    aliquid laudantium illum iste! Tempora placeat impedit fugit
+                    reprehenderit sed! Deserunt corporis sit, dolor, qui
+                    nesciunt itaque, minus debitis deleniti maxime ab quasi
+                    quam. Tenetur quia ut beatae voluptatem aperiam commodi ex
+                    laborum? Voluptatem, recusandae itaque!
+                  </Message>
+                  <Message src="/netanel.jpg" name="Netanel" time="10:11 AM">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Ad, delectus voluptatibus sapiente, a fuga ex iusto, beatae
+                    nulla architecto optio atque tenetur debitis velit. At
+                    maiores natus quis expedita asperiores aperiam eaque dolore
+                    accusamus blanditiis. Voluptatum illum laudantium tenetur ea
+                    neque, iste reiciendis, veniam aperiam, sint quae culpa quis
+                    accusantium sit beatae. Rerum mollitia quidem, odit pariatur
+                    molestiae, aspernatur veniam repellat asperiores obcaecati
+                    animi necessitatibus.
+                  </Message>
+                  <Message
+                    src="/profile.png"
+                    name="David Pechtalt"
+                    time="08:22 AM"
+                  >
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Earum, quia magnam, optio est tempora voluptate dolores
+                    fugiat nihil debitis autem enim cupiditate architecto
+                    corrupti maiores aut similique qui maxime voluptas alias
+                    neque eum. Voluptas quos quasi quibusdam dolorem vel quo ut
+                    id doloremque corrupti fugiat, placeat quidem quisquam
+                    impedit error excepturi cupiditate aut deleniti vitae quia
+                    aliquid laudantium illum iste! Tempora placeat impedit fugit
+                    reprehenderit sed! Deserunt corporis sit, dolor, qui
+                    nesciunt itaque, minus debitis deleniti maxime ab quasi
+                    quam. Tenetur quia ut beatae voluptatem aperiam commodi ex
+                    laborum? Voluptatem, recusandae itaque!
+                  </Message>
+                </Day>
               </div>
             </div>
           </div>
@@ -329,5 +440,50 @@ export const LeftNavButton = ({
         {tag}
       </span>
     </button>
+  );
+};
+
+export const Message = ({
+  children,
+  name,
+  src,
+  time,
+}: Props & { name: string; src: string; time: string }) => {
+  return (
+    <div className="flex w-[100%] px-5 py-2">
+      <div className="mr-2 flex h-[100%] flex-col items-start justify-start">
+        <img
+          src={`${src}`}
+          alt="avatar"
+          className="h-9 min-h-9 w-9 min-w-9 rounded-lg"
+        />
+      </div>
+      <div className="flex-grow flex-col">
+        <div className="flex items-center justify-start">
+          <button className="text-[15px]/[22px] font-bold hover:underline">
+            {name}
+          </button>
+          <button className="text-lightFontGray ml-2 mt-[2px] h-[100%] text-xs font-normal tracking-wide">
+            {time}
+          </button>
+        </div>
+        <div className="text-[15px]/[22px] font-normal">{children}</div>
+      </div>
+    </div>
+  );
+};
+
+export const Day = ({ date, children }: { date: string } & Props) => {
+  return (
+    <div className="mt-[22px] border-t-2 border-borderGray">
+      {" "}
+      <div className="sticky top-[22px] flex h-7 justify-center">
+        <button className="relative bottom-[14px] flex h-7 w-fit items-center rounded-3xl border-[1px] bg-white pl-4 pr-2 text-[13px]/[27px] font-semibold">
+          <span>{date}</span>{" "}
+          <Icons.Fold className="mx-1 h-3 min-h-3 w-3 min-w-3" />
+        </button>
+      </div>
+      {children}
+    </div>
   );
 };
