@@ -400,6 +400,35 @@ export default function Index() {
                     quam. Tenetur quia ut beatae voluptatem aperiam commodi ex
                     laborum? Voluptatem, recusandae itaque!
                   </Message>
+                  <Message src="/netanel.jpg" name="Netanel" time="10:11 AM">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Ad, delectus voluptatibus sapiente, a fuga ex iusto, beatae
+                    nulla architecto optio atque tenetur debitis velit. At
+                    maiores natus quis expedita asperiores aperiam eaque dolore
+                    accusamus blanditiis. Voluptatum illum laudantium tenetur ea
+                    neque, iste reiciendis, veniam aperiam, sint quae culpa quis
+                    accusantium sit beatae. Rerum mollitia quidem, odit pariatur
+                    molestiae, aspernatur veniam repellat asperiores obcaecati
+                    animi necessitatibus.
+                  </Message>
+                  <Message
+                    src="/profile.png"
+                    name="David Pechtalt"
+                    time="08:22 AM"
+                  >
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Earum, quia magnam, optio est tempora voluptate dolores
+                    fugiat nihil debitis autem enim cupiditate architecto
+                    corrupti maiores aut similique qui maxime voluptas alias
+                    neque eum. Voluptas quos quasi quibusdam dolorem vel quo ut
+                    id doloremque corrupti fugiat, placeat quidem quisquam
+                    impedit error excepturi cupiditate aut deleniti vitae quia
+                    aliquid laudantium illum iste! Tempora placeat impedit fugit
+                    reprehenderit sed! Deserunt corporis sit, dolor, qui
+                    nesciunt itaque, minus debitis deleniti maxime ab quasi
+                    quam. Tenetur quia ut beatae voluptatem aperiam commodi ex
+                    laborum? Voluptatem, recusandae itaque!
+                  </Message>
                 </Day>
               </div>
             </div>
@@ -478,7 +507,7 @@ export const Day = ({ date, children }: { date: string } & Props) => {
   return (
     <div className="mt-[22px] border-t-2 border-borderGray">
       {" "}
-      <div className="sticky top-[22px] flex h-7 justify-center">
+      <div className="sticky top-[22px] flex h-7 mx-3 justify-center ">
         <button className="relative bottom-[14px] flex h-7 w-fit items-center rounded-3xl border-[1px] bg-white pl-4 pr-2 text-[13px]/[27px] font-semibold">
           <span>{date}</span>{" "}
           <Icons.Fold className="mx-1 h-3 min-h-3 w-3 min-w-3" />
