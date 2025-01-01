@@ -2,8 +2,6 @@ import type { MetaFunction } from "@remix-run/node";
 import * as Icons from "../../components/icons";
 import { StyleAttributes, Props } from "../../types/types";
 import { useEffect, useState } from "react";
-import resolveConfig from "tailwindcss/resolveConfig";
-import tailwindConfig from "../../tailwind.config";
 export const meta: MetaFunction = () => {
   return [
     { title: "Slack Clone" },
@@ -12,7 +10,7 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
-  const fullConfig = resolveConfig(tailwindConfig);
+
   const [value, setValue] = useState<number>(176);
   const [windowWidth, setWindowWidth] = useState<number>(0);
   const [isMoving, setIsMoving] = useState<boolean>(false);
@@ -84,10 +82,9 @@ export default function Index() {
         </div>
       </div>
       <div
-        className="relative flex h-[calc(100vh-40px)] w-[100vw] overflow-hidden bg-purple-900"
-        style={{ cursor: `${isMoving ? "col-resize" : ""}` }}
+        className={`relative flex h-[calc(100vh-40px)] w-[100vw] overflow-hidden bg-purple-900 ${isMoving? "cursor-col-resize select-none":""}`}
       >
-        <div className="flex w-12 min-w-12 flex-col items-center justify-start pb-6 pt-2.5 medium:min-w-[70px] medium:w-[70px] medium:pt-2">
+        <div className="flex w-12 min-w-12 flex-col items-center justify-start pb-6 pt-2.5 medium:w-[70px] medium:min-w-[70px] medium:pt-2">
           <div className="mb-[9px] flex h-6 w-6 items-center justify-center rounded-md bg-lightGray text-[13px] font-bold uppercase text-lightBlack medium:mb-[18px] medium:h-9 medium:w-9 medium:text-xl">
             rv
           </div>
@@ -182,22 +179,19 @@ export default function Index() {
         </div>
 
         <div
-          className="relative mb-1 mr-1 flex-grow rounded-r-md bg-white"
-          style={{ cursor: `${isMoving ? "col-resize" : ""}` }}
+          className={`relative mb-1 mr-1 flex-grow rounded-r-md bg-white ${isMoving?"cursor-col-resize":""}`}
+         
         >
           <div className="flex h-[100%] w-[100%]">
             {" "}
             <div
-              className="absolute h-[100%] w-[3px] cursor-col-resize transition duration-500 hover:bg-seaBlue"
+              className={`absolute h-[100%] w-[3px] cursor-col-resize transition duration-500 hover:bg-seaBlue ${isMoving?"bg-seaBlue":""}`}
               onMouseDown={(e) => handleMouseDown(e)}
               role="slider"
               aria-valuemin={min}
               aria-valuemax={windowWidth * 0.7}
               aria-valuenow={value}
               tabIndex={0}
-              style={{
-                background: `${isMoving ? `${fullConfig.theme.colors.seaBlue}` : ""}`,
-              }}
             ></div>
             <div className="flex h-[100%] flex-grow flex-col">
               <div className="flex h-[49px] min-h-[49px] w-[100%] items-center pl-5 pr-3">
@@ -507,7 +501,7 @@ export const Day = ({ date, children }: { date: string } & Props) => {
   return (
     <div className="mt-[22px] border-t-2 border-borderGray">
       {" "}
-      <div className="sticky top-[22px] flex h-7 mx-3 justify-center ">
+      <div className="sticky top-[22px] mx-3 flex h-7 justify-center">
         <button className="relative bottom-[14px] flex h-7 w-fit items-center rounded-3xl border-[1px] bg-white pl-4 pr-2 text-[13px]/[27px] font-semibold">
           <span>{date}</span>{" "}
           <Icons.Fold className="mx-1 h-3 min-h-3 w-3 min-w-3" />
