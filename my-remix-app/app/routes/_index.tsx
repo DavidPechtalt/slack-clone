@@ -278,7 +278,7 @@ export default function Index() {
                     <span className="h-fit">View Profile</span>
                   </button>
                 </div>
-               <Day date="October 3rd, 2024">
+                <Day date="October 3rd, 2024">
                   <Message
                     src="/profile.png"
                     name="David Pechtalt"
@@ -309,8 +309,9 @@ export default function Index() {
                     officia perspiciatis labore est exercitationem expedita
                     officiis ipsa beatae voluptate, quia sit assumenda.
                     Voluptatem vel cum natus sed!
-                  </Message></Day>
-                
+                  </Message>
+                </Day>
+
                 <Day date="December 2nd, 2024">
                   <Message src="/netanel.jpg" name="Netanel" time="10:11 AM">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
