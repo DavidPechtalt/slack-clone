@@ -334,3 +334,27 @@ export function PaperPlane({ className }: StyleAttributes) {
     />
   );
 }
+export function CaretDown({ className }: StyleAttributes) {
+  return (
+    <SvgIcon
+      d="M7.00003 8.5C6.59557 8.5 6.23093 8.74364 6.07615 9.11732C5.92137 9.49099 6.00692 9.92111 6.29292 10.2071L11.2929 15.2071C11.6834 15.5976 12.3166 15.5976 12.7071 15.2071L17.7071 10.2071C17.9931 9.92111 18.0787 9.49099 17.9239 9.11732C17.7691 8.74364 17.4045 8.5 17 8.5H7.00003Z"
+      className={className}
+    />
+  );
+}
+export function CaretRight({ className }: StyleAttributes) {
+  return (
+    <SvgIcon
+      d="m14.74 11.4-4.58-4.22C9.7 6.75 9 7.12 9 7.78v8.43c0 .66.7 1.03 1.16.6l4.58-4.22c.34-.31.34-.89 0-1.2Z"
+      className={className}
+    />
+  );
+}
+export function Hash({ className }: StyleAttributes) {
+  return (
+    <SvgIcon
+      d="M9.74 3.878a.75.75 0 1 0-1.48-.255L7.68 7H3.75a.75.75 0 0 0 0 1.5h3.67L6.472 14H2.75a.75.75 0 0 0 0 1.5h3.463l-.452 2.623a.75.75 0 0 0 1.478.255l.496-2.878h3.228l-.452 2.623a.75.75 0 0 0 1.478.255l.496-2.878h3.765a.75.75 0 0 0 0-1.5h-3.506l.948-5.5h3.558a.75.75 0 0 0 0-1.5h-3.3l.54-3.122a.75.75 0 0 0-1.48-.255L12.43 7H9.2zM11.221 14l.948-5.5H8.942L7.994 14z"
+      className={className}
+    />
+  );
+}

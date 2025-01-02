@@ -173,7 +173,77 @@ export default function Index() {
                 </div>
               </button>
             </div>
-            <div className="w-[100%]"></div>
+
+            <NavFolder title="Channels">
+              <div className="w-[100%]">
+                <button className="flex h-7 w-[100%] items-center rounded-lg px-4 hover:bg-purple-400">
+                  <Icons.Hash className="mr-2 h-4 min-h-4 w-4 min-w-4" />
+                  <span className="truncate">all-ravtech-ven-introduction</span>
+                </button>
+                <button className="flex h-7 w-[100%] items-center truncate rounded-lg px-4 hover:bg-purple-400">
+                  <Icons.Hash className="mr-2 h-4 w-4" />
+                  <span className="truncate">main</span>
+                </button>
+                <button className="flex h-7 w-[100%] items-center truncate rounded-lg px-4 hover:bg-purple-400">
+                  <Icons.Hash className="mr-2 h-4 w-4" />
+                  <span className="truncate">social</span>
+                </button>
+                <button className="flex h-7 w-[100%] items-center truncate rounded-lg px-4 hover:bg-purple-400">
+                  <div className="mr-2 flex h-5 w-5 items-center justify-center rounded-md bg-purple-400">
+                    <Icons.Plus className="h-4 w-4" />
+                  </div>
+                  <span className="truncate">Add channels</span>
+                </button>
+              </div>
+            </NavFolder>
+            <NavFolder title="Direct Messages">
+              <div className="w-[100%]">
+                <button className="flex h-7 w-[100%] items-center truncate rounded-lg px-4 hover:bg-purple-400">
+                  <img
+                    src="/yehuda.png"
+                    alt="avatar"
+                    className="mr-2 h-5 w-5 rounded-md"
+                  />
+                  <span className="truncate">Yehuda Cohen</span>
+                </button>
+                <button className="flex h-7 w-[100%] items-center truncate rounded-lg px-4 hover:bg-purple-400">
+                  <img
+                    src="/shimon.png"
+                    alt="avatar"
+                    className="mr-2 h-5 w-5 rounded-md"
+                  />
+                  <span className="truncate">Shimi Riss </span>
+                </button>
+                <button className="flex h-7 w-[100%] items-center truncate rounded-lg px-4 hover:bg-purple-400">
+                  <img
+                    src="/profile.png"
+                    alt="avatar"
+                    className="mr-2 h-5 w-5 rounded-md"
+                  />
+                  <span className="truncate">
+                    {" "}
+                    David Pechtalt{" "}
+                    <span className="ml-3 text-[14px] opacity-65">you</span>
+                  </span>
+                </button>
+              </div>
+            </NavFolder>
+            <button className="flex h-7 w-[100%] items-center truncate rounded-lg mt-2 bg-purple-50 px-4 text-purple-900 hover:bg-purple-400">
+              <img
+                src="/netanel.jpg"
+                alt="avatar"
+                className="mr-2 h-5 w-5 rounded-md"
+              />
+              <span className="truncate"> Netanel </span>
+            </button>
+            <NavFolder title="Apps">
+            <button className="flex h-7 w-[100%] items-center truncate rounded-lg px-4 hover:bg-purple-400">
+                  <div className="mr-2 flex h-5 w-5 items-center justify-center rounded-md bg-purple-400">
+                    <Icons.Plus className="h-4 w-4" />
+                  </div>
+                  <span className="truncate">Add apps</span>
+                </button>
+            </NavFolder>
           </div>
         </div>
 
@@ -605,4 +675,29 @@ export const BoxBottomButton = ({ children }: Props) => {
 
 export const BoxDivider = () => {
   return <div className="ml-1.5 mr-2.5 mt-1 h-4 w-[1px] bg-[#a8a8a8]"></div>;
+};
+
+export const NavFolder = ({ children, title }: Props & { title: string }) => {
+  const [isOpen, setIsOpen] = useState<boolean>(true);
+  return (
+    <div className="mt-5 w-[100%] text-purple-300">
+      <div className="m-x-2 p-y-4 group flex w-[100%] px-2.5">
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="flex h-6 w-6 items-center justify-center rounded-sm pb-1 pr-[3px] hover:bg-purple-400"
+        >
+          {isOpen ? (
+            <Icons.CaretDown className="h-[17px] w-[17px]" />
+          ) : (
+            <Icons.CaretRight className="ml-[2px] h-[18px] w-[18px]" />
+          )}
+        </button>
+        <button className="flex items-center truncate rounded-lg px-1.5 hover:bg-purple-400">
+          {title}{" "}
+          <Icons.Fold className="mt-[2px] h-4 w-4 opacity-0 group-hover:opacity-100" />
+        </button>
+      </div>
+      <div className={`${isOpen ? "" : "hidden"}`}>{children}</div>
+    </div>
+  );
 };
