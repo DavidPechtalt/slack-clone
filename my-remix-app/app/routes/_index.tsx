@@ -423,7 +423,7 @@ export default function Index() {
                   </Message>
                 </Day>
               </div>
-              <div className="min-h-[144px] shrink-0 px-5 pb-3 h-fit">
+              <div className="h-fit min-h-[144px] shrink-0 px-5 pb-3">
                 <div className="flex min-h-[100%] w-[100%] flex-col rounded-lg border-[1px] border-borderGray">
                   <div className="flex h-10 bg-hoverGray p-1">
                     <BoxTopButton>
@@ -456,11 +456,48 @@ export default function Index() {
                       <Icons.CodeBlock className="h-[18px] w-[18px]" />
                     </BoxTopButton>
                   </div>
-                  <div className="w-[100%] h-fit px-3 py-2">
+                  <div className="h-fit w-[100%] px-3 py-2">
                     <textarea
                       placeholder="Message Netanel"
-                      className="w-[100%] outline-none resize-none"
+                      className="w-[100%] resize-none outline-none"
                     ></textarea>
+                  </div>
+                  <div className="flex h-10 w-[100%] items-center justify-between pb-2 pl-2.5 pr-1 text-[#1d1c1db3]">
+                    <div className="-50 flex items-center">
+                      {" "}
+                      <button className="flex h-7 w-7 items-center justify-center rounded-full bg-[#f2f2f2] hover:bg-[#e3e3e3] hover:text-black">
+                        <Icons.Plus className="h-[18px] w-[18px]" />
+                      </button>
+                      <div className="ml-2 flex h-10 items-center pb-1">
+                        <BoxBottomButton>
+                          <Icons.Formatting className="h-[18px] w-[18px]" />{" "}
+                        </BoxBottomButton>
+                        <BoxBottomButton>
+                          <Icons.Smile className="h-[18px] w-[18px]" />
+                        </BoxBottomButton>
+                        <BoxBottomButton>
+                          <Icons.Mention className="h-[18px] w-[18px]" />
+                        </BoxBottomButton>
+                        <BoxDivider />
+                        <BoxBottomButton>
+                          <Icons.Video className="h-[18px] w-[18px]" />
+                        </BoxBottomButton>
+                        <BoxBottomButton>
+                          <Icons.Record className="h-[18px] w-[18px]" />
+                        </BoxBottomButton>
+                        <BoxDivider />
+                        <BoxBottomButton>
+                          <Icons.RunShortcut className="h-[18px] w-[18px]" />
+                        </BoxBottomButton>
+                      </div>
+                    </div>
+                    <div className="flex items-center">
+                      <div className="flex h-6 w-6 items-center justify-center text-[#a8a8a8]">
+                        <Icons.PaperPlane className="h-[18px] w-[18px]" />
+                      </div>{" "}
+                      <div className="ml-1 h-6 w-[1px] bg-[#a8a8a8]"></div>
+                      <Icons.Fold className="h-6 w-6 p-1" />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -556,6 +593,13 @@ export const BoxTopButton = ({ children }: Props) => {
     <div className="m-[2px] mr-2.5 h-4 w-4 p-[2px] text-[#a8a8a8]">
       {children}
     </div>
+  );
+};
+export const BoxBottomButton = ({ children }: Props) => {
+  return (
+    <button className="m-[2px] mr-2.5 h-4 w-4 p-[2px] hover:bg-hoverGray hover:text-black">
+      {children}
+    </button>
   );
 };
 
