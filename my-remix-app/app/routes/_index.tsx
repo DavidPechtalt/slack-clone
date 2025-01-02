@@ -196,7 +196,7 @@ export default function Index() {
                 </button>
               </div>
             </NavFolder>
-            <NavFolder title="Direct Messages">
+            <NavFolder title="Direct messages">
               <div className="w-[100%]">
                 <button className="flex h-7 w-[100%] items-center truncate rounded-lg px-4 hover:bg-purple-400">
                   <img
@@ -228,7 +228,7 @@ export default function Index() {
                 </button>
               </div>
             </NavFolder>
-            <button className="flex h-7 w-[100%] items-center truncate rounded-lg mt-2 bg-purple-50 px-4 text-purple-900 hover:bg-purple-400">
+            <button className="flex h-7 w-[100%] items-center truncate rounded-lg  bg-purple-50 px-4 text-purple-900 hover:bg-purple-400">
               <img
                 src="/netanel.jpg"
                 alt="avatar"
@@ -680,7 +680,7 @@ export const BoxDivider = () => {
 export const NavFolder = ({ children, title }: Props & { title: string }) => {
   const [isOpen, setIsOpen] = useState<boolean>(true);
   return (
-    <div className="mt-5 w-[100%] text-purple-300">
+    <div className={`mt-5 w-[100%] text-purple-300 ${!isOpen &&"mb-2"}`}>
       <div className="m-x-2 p-y-4 group flex w-[100%] px-2.5">
         <button
           onClick={() => setIsOpen(!isOpen)}
