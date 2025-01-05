@@ -3,23 +3,18 @@
 @tailwind utilities;
 
 @layer utilities {
-    .scrollbar::-webkit-scrollbar {
-      width: 12px;
-      height: 25px;
-    }
-  
-    .scrollbar::-webkit-scrollbar-track {
-      border-radius: 100vh;
-     
-    }
-  
-    .scrollbar::-webkit-scrollbar-thumb {
-      background: gray;
-      border-radius: 100vh;
-      border: 3px solid #f6f7ed;
-    }
-  
-    .scrollbar::-webkit-scrollbar-thumb:hover {
-      background: #c0a0b9;
-    }
+  .scrollbar::-webkit-scrollbar {
+    width: 12px;
+    height: 25px;
   }
+
+  .scrollbar::-webkit-scrollbar-track {
+    border-radius: 100vh;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 100vh;
+    border: 3px solid #f6f7ed;
+  }
+}
