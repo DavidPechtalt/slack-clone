@@ -228,7 +228,7 @@ export default function Index() {
                 </button>
               </div>
             </NavFolder>
-            <button className="flex h-7 w-[100%] items-center truncate rounded-lg  bg-purple-50 px-4 text-purple-900 hover:bg-purple-400">
+            <button className="flex h-7 w-[100%] items-center truncate rounded-lg bg-purple-50 px-4 text-purple-900">
               <img
                 src="/netanel.jpg"
                 alt="avatar"
@@ -237,18 +237,18 @@ export default function Index() {
               <span className="truncate"> Netanel </span>
             </button>
             <NavFolder title="Apps">
-            <button className="flex h-7 w-[100%] items-center truncate rounded-lg px-4 hover:bg-purple-400">
-                  <div className="mr-2 flex h-5 w-5 items-center justify-center rounded-md bg-purple-400">
-                    <Icons.Plus className="h-4 w-4" />
-                  </div>
-                  <span className="truncate">Add apps</span>
-                </button>
+              <button className="flex h-7 w-[100%] items-center truncate rounded-lg px-4 hover:bg-purple-400">
+                <div className="mr-2 flex h-5 w-5 items-center justify-center rounded-md bg-purple-400">
+                  <Icons.Plus className="h-4 w-4" />
+                </div>
+                <span className="truncate">Add apps</span>
+              </button>
             </NavFolder>
           </div>
         </div>
 
         <div
-          className={`relative mb-1 mr-1 flex-grow rounded-r-md  bg-white ${isMoving ? "cursor-col-resize" : ""}`}
+          className={`relative mb-1 mr-1 flex-grow rounded-r-md bg-white ${isMoving ? "cursor-col-resize" : ""}`}
         >
           <div className="flex h-[100%] w-[100%]">
             {" "}
@@ -312,7 +312,7 @@ export default function Index() {
                   <Icons.Plus className="h-4 w-4" />
                 </button>
               </div>
-              <div className="flex-grow overflow-y-scroll scrollbar">
+              <div className="scrollbar flex-grow overflow-y-scroll">
                 <div className="w-[100%] px-5 pb-4 pt-12">
                   <div className="pb-4">
                     <div className="flex items-center">
@@ -494,7 +494,7 @@ export default function Index() {
                 </Day>
               </div>
               <div className="h-fit min-h-[144px] shrink-0 px-5 pb-3">
-                <div className="flex min-h-[100%] w-[100%] flex-col rounded-lg border-[1px] overflow-hidden border-borderGray text-[#a8a8a8] focus-within:text-[#1d1c1db3] focus-within:border-fontGray/[0.3]">
+                <div className="flex min-h-[100%] w-[100%] flex-col overflow-hidden rounded-lg border-[1px] border-borderGray text-[#a8a8a8] focus-within:border-fontGray/[0.3] focus-within:text-[#1d1c1db3]">
                   <div className="flex h-10 bg-hoverGray p-1">
                     <BoxTopButton>
                       <Icons.Bold className="h-[18px] w-[18px]" />
@@ -659,11 +659,7 @@ export const Day = ({ date, children }: { date: string } & Props) => {
 };
 
 export const BoxTopButton = ({ children }: Props) => {
-  return (
-    <div className="m-[2px] mr-2.5 h-4 w-4 p-[2px] ">
-      {children}
-    </div>
-  );
+  return <div className="m-[2px] mr-2.5 h-4 w-4 p-[2px]">{children}</div>;
 };
 export const BoxBottomButton = ({ children }: Props) => {
   return (
@@ -680,7 +676,7 @@ export const BoxDivider = () => {
 export const NavFolder = ({ children, title }: Props & { title: string }) => {
   const [isOpen, setIsOpen] = useState<boolean>(true);
   return (
-    <div className={`mt-5 w-[100%] text-purple-300 ${!isOpen &&"mb-2"}`}>
+    <div className={`mt-5 w-[100%] text-purple-300 ${!isOpen && "mb-2"}`}>
       <div className="m-x-2 p-y-4 group flex w-[100%] px-2.5">
         <button
           onClick={() => setIsOpen(!isOpen)}
