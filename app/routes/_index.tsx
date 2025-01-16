@@ -68,7 +68,7 @@ export default function Index() {
         </div>
       </div>
       <div
-        className={`relative flex h-[calc(100vh-40px)] w-[100vw] overflow-hidden bg-purple-900 ${isMoving ? "cursor-col-resize select-none" : ""}`}
+        className={`relative flex h-[calc(100vh-40px)] w-[100vw] overflow-hidden bg-purple-900 select-none ${isMoving ? "cursor-col-resize " : ""}`}
       >
         <div className="flex w-12 min-w-12 flex-col items-center justify-start pb-6 pt-2.5 medium:w-[70px] medium:min-w-[70px] medium:pt-2">
           <div className="mb-[9px] flex h-6 w-6 items-center justify-center rounded-md bg-lightGray text-[13px] font-bold uppercase text-lightBlack medium:mb-[18px] medium:h-9 medium:w-9 medium:text-xl">
@@ -107,7 +107,7 @@ export default function Index() {
         </div>
 
         <div
-          className={`h-100% top-0 flex min-w-44 flex-col overflow-hidden rounded-l-md bg-purple-800`}
+          className={`h-100% top-0 flex min-w-44 flex-col overflow-hidden rounded-l-md bg-purple-800 select-none`}
           style={{ width: `${value}px` }}
         >
           <div className="flex h-[49px] w-[calc(100%-3px)] items-center pl-3 pr-4">
@@ -235,7 +235,7 @@ export default function Index() {
         </div>
 
         <div
-          className={`relative mb-1 mr-1 flex-grow rounded-r-md bg-white ${isMoving ? "cursor-col-resize" : ""}`}
+          className={`relative mb-1 mr-1 flex-grow rounded-r-md bg-white select-none ${isMoving ? "cursor-col-resize select-none" : ""}`}
         >
           <div className="flex h-[100%] w-[100%]">
             {" "}
