@@ -1,7 +1,7 @@
 import type { MetaFunction } from "@remix-run/node";
 import * as Icons from "../../components/icons";
 import { StyleAttributes, Props } from "../../types/types";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 export const meta: MetaFunction = () => {
   return [
     { title: "Slack Clone" },
@@ -11,20 +11,7 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   const [value, setValue] = useState<number>(176);
-  const [windowWidth, setWindowWidth] = useState<number>(0);
   const [isMoving, setIsMoving] = useState<boolean>(false);
-  useEffect(() => {
-    setWindowWidth(window.innerWidth);
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   const min = 180;
   const handleMouseDown = (event: React.MouseEvent) => {
@@ -35,7 +22,7 @@ export default function Index() {
       setIsMoving(true);
       const delta = moveEvent.clientX - startX;
       const newValue = Math.min(
-        windowWidth * 0.7,
+        window.innerWidth * 0.7,
         Math.max(min, startValue + delta),
       );
       setTimeout(() => setValue(newValue), 300);
@@ -257,7 +244,7 @@ export default function Index() {
               onMouseDown={(e) => handleMouseDown(e)}
               role="slider"
               aria-valuemin={min}
-              aria-valuemax={windowWidth * 0.7}
+              aria-valuemax={undefined}
               aria-valuenow={value}
               tabIndex={0}
             ></div>
