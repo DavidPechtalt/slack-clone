@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 export const meta: MetaFunction = () => {
   return [
     { title: "Slack Clone" },
-    { name: "description", content: "Growling to Slack!" },
+    { name: "description", content: "Growling to Tailwind!" },
   ];
 };
 
