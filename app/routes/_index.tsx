@@ -25,7 +25,7 @@ export default function Index() {
         window.innerWidth * 0.7,
         Math.max(min, startValue + delta),
       );
-      setTimeout(() => setValue(newValue), 300);
+      setTimeout(() => setValue(newValue), 200);
     };
 
     const stopDrag = () => {
